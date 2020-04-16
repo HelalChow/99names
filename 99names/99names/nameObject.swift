@@ -12,9 +12,11 @@ import UIKit
 class nameObject{
     var name: UILabel
     var translation: UILabel
-    init(name: UILabel, translation: UILabel){
+    var arabic: UILabel
+    init(name: UILabel, translation: UILabel, arabic: UILabel){
         self.name = name
         self.translation = translation
+        self.arabic = arabic
     }
 }
 extension nameObject {

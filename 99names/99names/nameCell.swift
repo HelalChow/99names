@@ -12,10 +12,12 @@ class nameCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
+    @IBOutlet weak var arabicLabel: UILabel!
     
-    func setCell(name: String, translation: String){
+    func setCell(name: String, translation: String, arabic: String){
         nameLabel.text = name
         translationLabel.text = translation
+        arabicLabel.text = arabic
     }
     
 }
