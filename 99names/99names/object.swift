@@ -12,4 +12,5 @@ struct object: Decodable{
     let name: String
     let transliteration: String
     let meaning: String
+    let status: String
 }
