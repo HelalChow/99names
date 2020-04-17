@@ -25,9 +25,11 @@ class ListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("fe")
         object.getNames() {(results:[object]) in
             for result in results {
                 print("\(result)")
+                print("ded")
             }
         }
         
