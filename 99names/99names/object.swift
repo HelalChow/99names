@@ -8,9 +8,18 @@
 
 import Foundation
 
-struct object: Decodable{
+struct object{
     let name: String
     let transliteration: String
     let meaning: String
     let status: String
+    
+    enum SerializationError:Error{
+        case missing(String)
+        case invalid(String, Any)
+    }
+//
+//    init(json:[String:Any]) throws {
+//        
+//    }
 }
