@@ -11,7 +11,7 @@ import Foundation
 struct object: Decodable{
     let name: String
     let transliteration: String
-    let meaning: String
+    var meaning: String
     let status: String
     
     enum SerializationError:Error{
@@ -32,7 +32,8 @@ struct object: Decodable{
         
         name = json["name"] as? String ?? ""
         transliteration = json["transliteration"] as? String ?? ""
-        meaning = json["meaning"] as? String ?? ""
+        guard let en = json["en"] as? [String:Any] else {throw SerializationError.missing("en is missing")}
+        meaning = en["meaning"] as? String ?? ""
         status = json["status"] as? String ?? ""
     }
 
@@ -75,8 +76,9 @@ struct object: Decodable{
             do {
                 guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
                 guard let item = json["data"] as? [[String:Any]] else {print("item not found"); return}
-                
+  
                 let name = try object(json: item[0])
+                
                 print(name.meaning)
                 
             } catch let jsonErr {
