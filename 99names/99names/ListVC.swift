@@ -25,35 +25,20 @@ class ListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        object.getNames() {(results:[object]) in
+            for result in results {
+                print("\(result)")
+            }
+        }
         
-//        downloadJSON {
-//            self.tableView.reloadData()
-//        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         
       
 
     }
-    
-//    func downloadJSON(completed: @escaping () -> ()) {
-//        let url = URL(string: "http://api.aladhan.com/asmaAlHusna/1")
-//
-//        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-//            if error == nil {
-//                do {
-//                    self.objects = try JSONDecoder().decode([object].self, from: data!)
-//                    DispatchQueue.main.async {
-//                        completed()
-//                    }
-//                } catch {
-//                    print("JSON Error")
-//                }
-//            }
-//        }.resume()
-//
-//    }
-    
+
 
 }
 extension ListVC: UITableViewDelegate{
@@ -69,11 +54,19 @@ extension ListVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! nameCell
-//        let name = objects[indexPath.row].status
-//        let translation = objects[indexPath.row].meaning
         let name = names[indexPath.row]
         let translation = translations[indexPath.row]
-        cell.setCell(name: name, translation: translation, arabic: "")
+        
+//        object.getNames() {(results:[object]) in
+//            for result in results {
+//                self.objects.append(result)
+//            }
+//        }
+//        let name = objects[indexPath.row].transliteration
+//        let translation = objects[indexPath.row].meaning
+//        let arabic = objects[indexPath.row].name
+                
+        cell.setCell(name: name, translation: translation, arabic: "arabic")
         
         return cell
     }
