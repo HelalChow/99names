@@ -13,6 +13,7 @@ class ListVC: UIViewController {
     
     var array = [first]()
     var identity = "memorized"
+    public var completionHandler: ((first) -> Void)?
     
   
     override func viewDidLoad() {
@@ -61,6 +62,7 @@ class ListVC: UIViewController {
 
             let payNow = UIContextualAction(style: .normal, title: "Add to Memorized") { (action, view, nil) in
                 print("roar")
+                NotificationCenter.default.post(name: Notification.Name("element"), object: self.array[indexPath.row])
                 
 //                self.array.remove(at: indexPath.row)
 //                self.tableView.deleteRows(at: [indexPath], with: .right)
@@ -78,12 +80,12 @@ class ListVC: UIViewController {
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //addElement(self.array[indexPath.row])
+        completionHandler?(self.array[indexPath.row])
+//        let vc = storyboard?.instantiateViewController(identifier: "memorized") as! MemorizedVC
+//
+//        vc.addElement(element: self.array[indexPath.row])
+        NotificationCenter.default.post(name: Notification.Name("element"), object: self.array[indexPath.row])
         
-        let vc = storyboard?.instantiateViewController(identifier: "memorized") as! MemorizedVC
-        vc.completionHandler = { element in
-            self.array[indexPath.row] = element
-        }
         print("hello")
     }
 }

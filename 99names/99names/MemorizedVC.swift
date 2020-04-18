@@ -12,12 +12,17 @@ class MemorizedVC: UIViewController {
 
     @IBOutlet weak var memTableView: UITableView!
     var memorizedArray = [first]()
-    public var completionHandler: ((first) -> Void)?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        completionHandler?(memorizedArray[0])
+        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("element"), object: nil)
+        
+        print(memorizedArray.count)
+        memTableView.reloadData()
 
         memTableView.delegate = self
         memTableView.dataSource = self
@@ -25,14 +30,21 @@ class MemorizedVC: UIViewController {
     
     func addElement(element: first){
         memorizedArray.append(element)
-        print("element added")
+        print(memorizedArray)
+        
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        print("something")
+        let entry = notification.object as! first
+        memorizedArray.append(entry)
     }
 
   
 }
 extension MemorizedVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-   
+        
         print("hello")
     }
 }
