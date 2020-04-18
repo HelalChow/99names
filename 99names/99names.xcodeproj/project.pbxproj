@@ -19,6 +19,8 @@
 		1BCD18CF244903700047F83F /* nameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18CE244903700047F83F /* nameCell.swift */; };
 		1BCD18D1244912B20047F83F /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D0244912B20047F83F /* object.swift */; };
 		1BCD18D5244B34110047F83F /* MemorizedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D4244B34110047F83F /* MemorizedVC.swift */; };
+		1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D6244B497C0047F83F /* StudyVC.swift */; };
+		1BCD18DC244B49EB0047F83F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18DB244B49EB0047F83F /* iCarousel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		1BCD18CE244903700047F83F /* nameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameCell.swift; sourceTree = "<group>"; };
 		1BCD18D0244912B20047F83F /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
 		1BCD18D4244B34110047F83F /* MemorizedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizedVC.swift; sourceTree = "<group>"; };
+		1BCD18D6244B497C0047F83F /* StudyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyVC.swift; sourceTree = "<group>"; };
+		1BCD18D9244B49EA0047F83F /* 99names-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "99names-Bridging-Header.h"; sourceTree = "<group>"; };
+		1BCD18DA244B49EB0047F83F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		1BCD18DB244B49EB0047F83F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		1BCD18992448F47D0047F83F /* 99names */ = {
 			isa = PBXGroup;
 			children = (
+				1BCD18D8244B49CC0047F83F /* Carousel */,
 				1BCD189A2448F47D0047F83F /* AppDelegate.swift */,
 				1BCD189C2448F47D0047F83F /* SceneDelegate.swift */,
 				1BCD18A02448F47D0047F83F /* Main.storyboard */,
@@ -118,6 +125,7 @@
 				1BCD18CE244903700047F83F /* nameCell.swift */,
 				1BCD18D0244912B20047F83F /* object.swift */,
 				1BCD18D4244B34110047F83F /* MemorizedVC.swift */,
+				1BCD18D6244B497C0047F83F /* StudyVC.swift */,
 			);
 			path = 99names;
 			sourceTree = "<group>";
@@ -138,6 +146,16 @@
 				1BCD18BE2448F47F0047F83F /* Info.plist */,
 			);
 			path = 99namesUITests;
+			sourceTree = "<group>";
+		};
+		1BCD18D8244B49CC0047F83F /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				1BCD18DA244B49EB0047F83F /* iCarousel.h */,
+				1BCD18DB244B49EB0047F83F /* iCarousel.m */,
+				1BCD18D9244B49EA0047F83F /* 99names-Bridging-Header.h */,
+			);
+			path = Carousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +226,7 @@
 				TargetAttributes = {
 					1BCD18962448F47D0047F83F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					1BCD18AC2448F47F0047F83F = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -273,6 +292,8 @@
 			files = (
 				1BCD18CB2448F7850047F83F /* ListVC.swift in Sources */,
 				1BCD189B2448F47D0047F83F /* AppDelegate.swift in Sources */,
+				1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */,
+				1BCD18DC244B49EB0047F83F /* iCarousel.m in Sources */,
 				1BCD18D1244912B20047F83F /* object.swift in Sources */,
 				1BCD189D2448F47D0047F83F /* SceneDelegate.swift in Sources */,
 				1BCD18CF244903700047F83F /* nameCell.swift in Sources */,
@@ -450,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQX45R5BVV;
 				INFOPLIST_FILE = 99names/Info.plist;
@@ -459,6 +481,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hchowdhury.-9names";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "99names/Carousel/99names-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQX45R5BVV;
 				INFOPLIST_FILE = 99names/Info.plist;
@@ -477,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hchowdhury.-9names";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "99names/Carousel/99names-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
