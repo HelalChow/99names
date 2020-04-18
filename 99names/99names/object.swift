@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct object: Decodable{
+struct object{
     let name: String
     let transliteration: String
     let meaning: String
@@ -26,33 +26,33 @@ struct object: Decodable{
         meaning = en["meaning"] as? String ?? ""
     }
 
-    static let basePath = "http://api.aladhan.com/asmaAlHusna/"
-
-    static func getNames(completion: @escaping ([object]) -> ()) {
-        let url = basePath + "1"
-        let request = URLRequest(url: URL(string: url)!)
-        
-        
-        URLSession.shared.dataTask(with: request) { (data, response, err) in
-            var entry:[object] = []
-            guard let data = data else {return}
-            do {
-                // This line would allow to replace everything else below. And the init
-//                let name = try JSONDecoder().decode(object.self, from: data)
-                
-                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
-                guard let item = json["data"] as? [[String:Any]] else {print("item not found"); return}
-
-                let name = try object(json: item[0])
-                entry.append(name)
-
-                
-                
-            } catch let jsonErr {
-                print("Error Serializing json", jsonErr)
-            }
-            completion(entry)
-           
-        }.resume()
-    }
+//    static let basePath = "http://api.aladhan.com/asmaAlHusna/"
+//
+//    static func getNames(completion: @escaping ([object]) -> ()) {
+//        let url = basePath + "1"
+//        let request = URLRequest(url: URL(string: url)!)
+//
+//
+//        URLSession.shared.dataTask(with: request) { (data, response, err) in
+//            var entry:[object] = []
+//            guard let data = data else {return}
+//            do {
+//                // This line would allow to replace everything else below. And the init
+////                let name = try JSONDecoder().decode(object.self, from: data)
+//
+//                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
+//                guard let item = json["data"] as? [[String:Any]] else {print("item not found"); return}
+//
+//                let name = try object(json: item[0])
+//                entry.append(name)
+//
+//
+//
+//            } catch let jsonErr {
+//                print("Error Serializing json", jsonErr)
+//            }
+//            completion(entry)
+//
+//        }.resume()
+//    }
 }
