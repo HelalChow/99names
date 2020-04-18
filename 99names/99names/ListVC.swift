@@ -11,7 +11,7 @@ import UIKit
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var array = [object]()
+    var array = [first]()
     
     let names = [
         "Ar-Rahman",
@@ -25,20 +25,15 @@ class ListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillArray {
-            print(self.array.count)
-            self.tableView.reloadData()
+        fillArray{
+            print(self.array)
         }
-        print(self.array.count)
-//        object.getNames() {(results:[object]) in
-//            self.array.append(results[0])
-//            print("\(results[0])")
-//        }
-        tableView.reloadData()
+
+        print(array)
         
+        print(array.count)
         tableView.delegate = self
         tableView.dataSource = self
-        
 
     }
    
@@ -48,29 +43,19 @@ class ListVC: UIViewController {
         let url = basePath + "1"
         let request = URLRequest(url: URL(string: url)!)
 
-
         URLSession.shared.dataTask(with: request) { (data, response, err) in
-//                    var entry:[object] = []
+
             guard let data = data else {return}
             do {
-                // This line would allow to replace everything else below. And the init
-                // let name = try JSONDecoder().decode(object.self, from: data)
-
-                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {return}
-                guard let item = json["data"] as? [[String:Any]] else {print("item not found"); return}
-
-//                self.name = try object(json: item[0])
-//                self.array.append(self.name)
-//                print(self.name)
-                self.array.append(try object(json: item[0]))
+                self.array = [try JSONDecoder().decode(first.self, from: data)]
                 DispatchQueue.main.async {
                     completed()
                 }
 
-
             } catch let jsonErr {
                 print("Error Serializing json", jsonErr)
             }
+
 
         }.resume()
     }
@@ -86,7 +71,7 @@ extension ListVC: UITableViewDelegate{
 
 extension ListVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
