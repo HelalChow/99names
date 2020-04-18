@@ -12,37 +12,17 @@ class StudyVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    var imageArr = [
-        UIImage(named: "card"),
-        UIImage(named: "orange"),
-        UIImage(named: "card")
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(array.count)
+        
+        collectionView.register(UINib.init(nibName: "studyCell", bundle: nil), forCellWithReuseIdentifier: "studyCell")
+        let flowLayout = UP
+        
+        
        
     }
     
    
    
 }
-extension StudyVC: iCarouselDelegate, iCarouselDataSource{
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return imageArr.count
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        var imageView: UIImageView!
-        if view == nil{
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 20, height: 250))
-            imageView.contentMode = .scaleAspectFit
-        } else {
-            imageView = view as? UIImageView
-        }
-        imageView.image = imageArr[index]
-        return imageView
-    }
-    
-}
+
