@@ -9,7 +9,8 @@
 import UIKit
 
 class StudyVC: UIViewController {
-    @IBOutlet weak var iCarouselView: iCarousel!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     var imageArr = [
@@ -21,16 +22,10 @@ class StudyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(array.count)
-        carouselSetup()
        
     }
     
-    func carouselSetup(){
-        iCarouselView.type = .cylinder
-        iCarouselView.contentMode = .scaleAspectFill
-        iCarouselView.isPagingEnabled = true
-    }
-    
+   
    
 }
 extension StudyVC: iCarouselDelegate, iCarouselDataSource{
