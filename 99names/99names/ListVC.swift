@@ -64,6 +64,24 @@ class ListVC: UIViewController {
     
 
 
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+            let payNow = UIContextualAction(style: .normal, title: "Add to Memorized") { (action, view, nil) in
+                print("roar")
+                
+//                self.array.remove(at: indexPath.row)
+//                self.tableView.deleteRows(at: [indexPath], with: .right)
+//                self.showAlert(title: "Item Delivered", message: "Transaction Has Been Completed")
+            }
+
+            payNow.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+
+            let config = UISwipeActionsConfiguration(actions: [payNow])
+            config.performsFirstActionWithFullSwipe = true
+            return config
+        }
+
+
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,3 +106,4 @@ extension ListVC: UITableViewDataSource{
         return cell
     }
 }
+

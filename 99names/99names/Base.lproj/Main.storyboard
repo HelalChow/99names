@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Full List-->
         <scene sceneID="UfD-76-Das">
             <objects>
                 <viewController id="iLf-sV-qWW" customClass="ListVC" customModule="_9names" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="U6O-WH-4HH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dbL-HX-lIn"/>
+                    <tabBarItem key="tabBarItem" title="Full List" image="list.dash" catalog="system" id="dbL-HX-lIn"/>
                     <connections>
                         <outlet property="tableView" destination="G23-EZ-bXX" id="v3x-pS-fmh"/>
                     </connections>
@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="-502" y="848"/>
         </scene>
-        <!--View Controller-->
+        <!--Review-->
         <scene sceneID="ePZ-iM-qUu">
             <objects>
                 <viewController id="md3-Rm-5Bg" sceneMemberID="viewController">
@@ -101,10 +101,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4Lj-Cl-lVE"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Review" image="book.fill" catalog="system" id="Gby-N4-g7w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5m-gR-3bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="848"/>
+            <point key="canvasLocation" x="425" y="848"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mei-o2-8s3">
@@ -118,6 +119,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="iLf-sV-qWW" kind="relationship" relationship="viewControllers" id="kTk-ep-2ow"/>
+                        <segue destination="md3-Rm-5Bg" kind="relationship" relationship="viewControllers" id="KZ9-Pt-ATE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czq-IR-Vp2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,6 +128,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="orange" width="347" height="84"/>
     </resources>
 </document>
