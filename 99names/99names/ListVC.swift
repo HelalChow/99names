@@ -25,9 +25,15 @@ class ListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillArray{
-            print(self.array)
+        
+        let anonymousFunction = { (fetchedName: first) in
+            DispatchQueue.main.async {
+                self.array.append(fetchedName)
+                self.tableView.reloadData()
+            }
         }
+        
+        fillArray(completed: anonymousFunction)
 
         print(array)
         
@@ -38,7 +44,7 @@ class ListVC: UIViewController {
     }
    
     
-    func fillArray(completed: @escaping () -> ()) {
+    func fillArray(completed: @escaping (first) -> ()) {
         let basePath = "http://api.aladhan.com/asmaAlHusna/"
         let url = basePath + "1"
         let request = URLRequest(url: URL(string: url)!)
@@ -47,9 +53,9 @@ class ListVC: UIViewController {
 
             guard let data = data else {return}
             do {
-                self.array = [try JSONDecoder().decode(first.self, from: data)]
+                let initial = try JSONDecoder().decode(first.self, from: data)
                 DispatchQueue.main.async {
-                    completed()
+                    completed(initial)
                 }
 
             } catch let jsonErr {
@@ -86,13 +92,13 @@ extension ListVC: UITableViewDataSource{
 //            cell.setCell(name: name, translation: translation, arabic: arabic)
 //        }
         
-//        let name = array[indexPath.row].transliteration
-//        let translation = array[indexPath.row].meaning
-//        let arabic = array[indexPath.row].name
+        let name = array[indexPath.row].data[0].transliteration
+        let translation = array[indexPath.row].data[0].en.meaning
+        let arabic = array[indexPath.row].data[0].name
 //
 //
 //
-//        cell.setCell(name: name, translation: translation, arabic: arabic)
+        cell.setCell(name: name, translation: translation, arabic: arabic)
         
         return cell
     }
