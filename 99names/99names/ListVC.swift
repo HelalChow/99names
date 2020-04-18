@@ -12,17 +12,9 @@ class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var array = [first]()
+    var identity = "memorized"
     
-    let names = [
-        "Ar-Rahman",
-        "Ar-Rahim"
-    ]
-    
-    let translations = [
-        "The Most Merciful",
-        "The Most Gracious"
-    ]
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +28,7 @@ class ListVC: UIViewController {
         for num in 1...99 {
             fillArray(num: num, completed: anonymousFunction)
         }
+        
         
 
         tableView.delegate = self
@@ -85,6 +78,12 @@ class ListVC: UIViewController {
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //addElement(self.array[indexPath.row])
+        
+        let vc = storyboard?.instantiateViewController(identifier: "memorized") as! MemorizedVC
+        vc.completionHandler = { element in
+            self.array[indexPath.row] = element
+        }
         print("hello")
     }
 }
