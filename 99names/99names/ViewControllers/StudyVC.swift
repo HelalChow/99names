@@ -64,6 +64,7 @@ class CustomCell: UICollectionViewCell{
     fileprivate let bg: UIImageView = {
         let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "sky")
+        
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
