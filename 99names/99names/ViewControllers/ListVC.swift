@@ -19,8 +19,8 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         
         let anonymousFunction = { (fetchedName: first) in
+            self.array.append(fetchedName)
             DispatchQueue.main.async {
-                self.array.append(fetchedName)
                 self.tableView.reloadData()
             }
         }
