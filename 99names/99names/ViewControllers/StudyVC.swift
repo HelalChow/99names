@@ -10,6 +10,7 @@ import UIKit
 
 class StudyVC: UIViewController {
 //    let data =[]
+        
     
     fileprivate let collectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
@@ -22,6 +23,8 @@ class StudyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        
         view.addSubview(collectionView)
         collectionView.backgroundColor = .clear
         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 300).isActive = true
@@ -33,6 +36,7 @@ class StudyVC: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     
     }
     
@@ -64,12 +68,17 @@ class CustomCell: UICollectionViewCell{
     fileprivate let bg: UIImageView = {
         let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "sky")
-        
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.layer.cornerRadius = 40
         return iv
+    }()
+    fileprivate let name: UILabel = {
+        let text = UILabel()
+        text.text = "testing"
+        return text
+        
     }()
     
     override init(frame: CGRect){
