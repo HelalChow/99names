@@ -16,7 +16,7 @@ class StudyVC: UIViewController {
         super.viewDidLoad()
         
         collectionView.register(UINib.init(nibName: "studyCell", bundle: nil), forCellWithReuseIdentifier: "studyCell")
-        let flowLayout = UP
+//        let flowLayout = UP
         
         
        

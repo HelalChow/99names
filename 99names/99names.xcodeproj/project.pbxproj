@@ -20,9 +20,6 @@
 		1BCD18D5244B34110047F83F /* MemorizedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D4244B34110047F83F /* MemorizedVC.swift */; };
 		1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D6244B497C0047F83F /* StudyVC.swift */; };
 		1BCD18DC244B49EB0047F83F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18DB244B49EB0047F83F /* iCarousel.m */; };
-		1BCD18E7244B68450047F83F /* studyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18E5244B68450047F83F /* studyCell.swift */; };
-		1BCD18E8244B68450047F83F /* studyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCD18E6244B68450047F83F /* studyCell.xib */; };
-		1BCD18EA244B6BE10047F83F /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18E9244B6BE10047F83F /* UPCarouselFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +61,6 @@
 		1BCD18D9244B49EA0047F83F /* 99names-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "99names-Bridging-Header.h"; sourceTree = "<group>"; };
 		1BCD18DA244B49EB0047F83F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		1BCD18DB244B49EB0047F83F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		1BCD18E5244B68450047F83F /* studyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyCell.swift; sourceTree = "<group>"; };
-		1BCD18E6244B68450047F83F /* studyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = studyCell.xib; sourceTree = "<group>"; };
-		1BCD18E9244B6BE10047F83F /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +155,6 @@
 		1BCD18E1244B67D40047F83F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1BCD18E9244B6BE10047F83F /* UPCarouselFlowLayout.swift */,
 				1BCD18D6244B497C0047F83F /* StudyVC.swift */,
 				1BCD18D4244B34110047F83F /* MemorizedVC.swift */,
 				1BCD18CA2448F7850047F83F /* ListVC.swift */,
@@ -174,8 +167,6 @@
 			children = (
 				1BCD18CE244903700047F83F /* nameCell.swift */,
 				1BCD18D0244912B20047F83F /* object.swift */,
-				1BCD18E5244B68450047F83F /* studyCell.swift */,
-				1BCD18E6244B68450047F83F /* studyCell.xib */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -288,7 +279,6 @@
 				1BCD18A72448F47F0047F83F /* LaunchScreen.storyboard in Resources */,
 				1BCD18A42448F47F0047F83F /* Assets.xcassets in Resources */,
 				1BCD18A22448F47D0047F83F /* Main.storyboard in Resources */,
-				1BCD18E8244B68450047F83F /* studyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +306,6 @@
 				1BCD18CB2448F7850047F83F /* ListVC.swift in Sources */,
 				1BCD189B2448F47D0047F83F /* AppDelegate.swift in Sources */,
 				1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */,
-				1BCD18E7244B68450047F83F /* studyCell.swift in Sources */,
-				1BCD18EA244B6BE10047F83F /* UPCarouselFlowLayout.swift in Sources */,
 				1BCD18DC244B49EB0047F83F /* iCarousel.m in Sources */,
 				1BCD18D1244912B20047F83F /* object.swift in Sources */,
 				1BCD189D2448F47D0047F83F /* SceneDelegate.swift in Sources */,

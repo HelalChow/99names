@@ -5,16 +5,14 @@
 //  Created by Helal Chowdhury on 4/16/20.
 //  Copyright © 2020 Helal. All rights reserved.
 //
-var array = [first]()
+
 
 import UIKit
 
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    var array = [first]()
     
-    
-    var identity = "memorized"
-    public var completionHandler: ((first) -> Void)?
     
   
     override func viewDidLoad() {
@@ -22,7 +20,7 @@ class ListVC: UIViewController {
         
         let anonymousFunction = { (fetchedName: first) in
             DispatchQueue.main.async {
-                array.append(fetchedName)
+                self.array.append(fetchedName)
                 self.tableView.reloadData()
             }
         }
@@ -30,7 +28,6 @@ class ListVC: UIViewController {
         for num in 1...99 {
             fillArray(num: num, completed: anonymousFunction)
         }
-         NotificationCenter.default.post(name: Notification.Name("try"), object: array)
         
 
         tableView.delegate = self
@@ -63,7 +60,7 @@ class ListVC: UIViewController {
 
             let payNow = UIContextualAction(style: .normal, title: "Add to Memorized") { (action, view, nil) in
                 print("roar")
-                NotificationCenter.default.post(name: Notification.Name("element"), object: array[indexPath.row])
+                NotificationCenter.default.post(name: Notification.Name("element"), object: self.array[indexPath.row])
                 
 //                self.array.remove(at: indexPath.row)
 //                self.tableView.deleteRows(at: [indexPath], with: .right)
@@ -81,12 +78,7 @@ class ListVC: UIViewController {
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        completionHandler?(array[indexPath.row])
-//        let vc = storyboard?.instantiateViewController(identifier: "memorized") as! MemorizedVC
-//
-//        vc.addElement(element: self.array[indexPath.row])
-        NotificationCenter.default.post(name: Notification.Name("element"), object: array[indexPath.row])
-        
+
         print("hello")
     }
 }

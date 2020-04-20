@@ -19,7 +19,6 @@ class MemorizedVC: UIViewController {
         
         let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
         
-        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("element"), object: nil)
         
         print(memorizedArray.count)
         memTableView.reloadData()
@@ -34,11 +33,6 @@ class MemorizedVC: UIViewController {
         
     }
     
-    @objc func didGetNotification(_ notification: Notification) {
-        print("something")
-        let entry = notification.object as! first
-        memorizedArray.append(entry)
-    }
 
   
 }
