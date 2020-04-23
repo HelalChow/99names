@@ -19,6 +19,9 @@
 		1BCD18D1244912B20047F83F /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D0244912B20047F83F /* object.swift */; };
 		1BCD18D5244B34110047F83F /* MemorizedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D4244B34110047F83F /* MemorizedVC.swift */; };
 		1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D6244B497C0047F83F /* StudyVC.swift */; };
+		1BF6BBC424523A1D00B2D2A3 /* itemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */; };
+		1BF6BBC524523A1D00B2D2A3 /* itemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */; };
+		1BF6BBC724523B2B00B2D2A3 /* CarouselVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		1BCD18D0244912B20047F83F /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
 		1BCD18D4244B34110047F83F /* MemorizedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizedVC.swift; sourceTree = "<group>"; };
 		1BCD18D6244B497C0047F83F /* StudyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyVC.swift; sourceTree = "<group>"; };
+		1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCell.swift; sourceTree = "<group>"; };
+		1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemCell.xib; sourceTree = "<group>"; };
+		1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 				1BCD18D6244B497C0047F83F /* StudyVC.swift */,
 				1BCD18D4244B34110047F83F /* MemorizedVC.swift */,
 				1BCD18CA2448F7850047F83F /* ListVC.swift */,
+				1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 			children = (
 				1BCD18CE244903700047F83F /* nameCell.swift */,
 				1BCD18D0244912B20047F83F /* object.swift */,
+				1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */,
+				1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF6BBC524523A1D00B2D2A3 /* itemCell.xib in Resources */,
 				1BCD18A72448F47F0047F83F /* LaunchScreen.storyboard in Resources */,
 				1BCD18A42448F47F0047F83F /* Assets.xcassets in Resources */,
 				1BCD18A22448F47D0047F83F /* Main.storyboard in Resources */,
@@ -288,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BF6BBC424523A1D00B2D2A3 /* itemCell.swift in Sources */,
 				1BCD18CB2448F7850047F83F /* ListVC.swift in Sources */,
 				1BCD189B2448F47D0047F83F /* AppDelegate.swift in Sources */,
 				1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */,
+				1BF6BBC724523B2B00B2D2A3 /* CarouselVC.swift in Sources */,
 				1BCD18D1244912B20047F83F /* object.swift in Sources */,
 				1BCD189D2448F47D0047F83F /* SceneDelegate.swift in Sources */,
 				1BCD18CF244903700047F83F /* nameCell.swift in Sources */,

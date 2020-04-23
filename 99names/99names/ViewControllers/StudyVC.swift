@@ -94,3 +94,5 @@ class CustomCell: UICollectionViewCell{
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// https://www.youtube.com/watch?v=eWGu3hcL3ww
