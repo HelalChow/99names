@@ -13,22 +13,25 @@ class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var array = [first]()
     
-    
+    var strNum = "1"
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let anonymousFunction = { (fetchedName: first) in
-            self.array.append(fetchedName)
+        let anonymousFunction = { (fetchedName: [first]) in
+            self.array = fetchedName
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            print(self.array[0])
         }
         
-        for num in 1...99 {
-            fillArray(num: num, completed: anonymousFunction)
-        }
         
+        for num in 2...99 {
+            strNum = strNum + "," + String(num)
+//            fillArray(num: num, completed: anonymousFunction)
+        }
+        fillArray(num: strNum, completed: anonymousFunction)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,17 +39,22 @@ class ListVC: UIViewController {
     }
    
     
-    func fillArray(num: Int, completed: @escaping (first) -> ()) {
+    func fillArray(num: String, completed: @escaping ([first]) -> ()) {
         let basePath = "http://api.aladhan.com/asmaAlHusna/"
-        let url = basePath + String(num)
+        let url = basePath + num
         let request = URLRequest(url: URL(string: url)!)
+        var total = [first]()
 
         URLSession.shared.dataTask(with: request) { (data, response, err) in
             guard let data = data else {return}
             do {
-                let initial = try JSONDecoder().decode(first.self, from: data)
+                for i in 1...99{
+                    let initial = try JSONDecoder().decode(first.self, from: data)
+                    total.append(initial)
+                }
+                
                 DispatchQueue.main.async {
-                    completed(initial)
+                    completed(total)
                 }
             } catch let jsonErr {
                 print("Error Serializing json", jsonErr)
@@ -91,9 +99,9 @@ extension ListVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! nameCell
 
-        let name = array[indexPath.row].data[0].transliteration
-        let translation = array[indexPath.row].data[0].en.meaning
-        let arabic = array[indexPath.row].data[0].name
+        let name = array[0].data[indexPath.row].transliteration
+        let translation = array[0].data[indexPath.row].en.meaning
+        let arabic = array[0].data[indexPath.row].name
 
         cell.setCell(name: name, translation: translation, arabic: arabic)
         

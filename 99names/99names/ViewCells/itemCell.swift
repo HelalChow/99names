@@ -21,3 +21,5 @@ class itemCell: UICollectionViewCell {
         self.arabicLabel.text = text
     }
 }
+
+//https://www.youtube.com/watch?v=FMqX628vE1c
