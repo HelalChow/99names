@@ -15,19 +15,35 @@ class CarouselVC: UIViewController {
     
     let dataArray = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG"]
     
-    var estimateWidth = 160.0
+    var estimateWidth = 250.0
     let cellMarginSize = 16.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-//        self.collectView.delegate = self
+        self.collectView.delegate = self
         self.collectView.dataSource = self
 //
-        self.collectView.register(UINib(nibName: "itemCell", bundle: nil), forCellWithReuseIdentifier: "itelCell")
+        self.collectView.register(UINib(nibName: "itemCell", bundle: nil), forCellWithReuseIdentifier: "itemCell")
+        setupGridView()
+        
+
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.setupGridView()
+        DispatchQueue.main.async {
+            self.collectView.reloadData()
+        }
     }
     
+    func setupGridView(){
+        let flow = collectView?.collectionViewLayout as! UICollectionViewFlowLayout
+        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
+        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
+        flow.scrollDirection = .horizontal
+    }
 
 }
 extension CarouselVC: UICollectionViewDataSource {
@@ -37,7 +53,7 @@ extension CarouselVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! itemCell
-        cell.setData(text: self.dataArray[0])
+        cell.setData(text: self.dataArray[indexPath.row])
         return cell
     }
 }
@@ -46,6 +62,7 @@ extension CarouselVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.calculateWith()
         return CGSize(width: width, height: width)
+//        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
     }
     func calculateWith() -> CGFloat {
         let estimatedWidth = CGFloat(estimateWidth)
@@ -56,4 +73,6 @@ extension CarouselVC: UICollectionViewDelegateFlowLayout{
 
         return width
     }
+    
+    
 }
