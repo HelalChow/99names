@@ -53,10 +53,11 @@ extension CarouselVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! itemCell
-//        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
-//        print(array[0].data[0].name)
+
+        let arabicName = array[0].data[indexPath.row].name
+        let englishName = array[0].data[indexPath.row].transliteration
         
-        cell.setData(text: array[0].data[indexPath.row].name)
+        cell.setData(arabic: arabicName, name: englishName)
         return cell
     }
 }

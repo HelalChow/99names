@@ -11,14 +11,16 @@ import UIKit
 class itemCell: UICollectionViewCell {
 
     @IBOutlet weak var arabicLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setData(text: String) {
-        self.arabicLabel.text = text
+    func setData(arabic: String, name: String) {
+        self.arabicLabel.text = arabic
+        self.nameLabel.text = name
     }
 }
 
