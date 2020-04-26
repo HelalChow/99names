@@ -48,15 +48,15 @@ class CarouselVC: UIViewController {
 }
 extension CarouselVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataArray.count
+        return array.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! itemCell
-        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
-        print(vc.array)
+//        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
+//        print(array[0].data[0].name)
         
-//        cell.setData(text: vc.array[0].data[indexPath.row].name)
+        cell.setData(text: array[0].data[indexPath.row].name)
         return cell
     }
 }

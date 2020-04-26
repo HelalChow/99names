@@ -6,12 +6,12 @@
 //  Copyright © 2020 Helal. All rights reserved.
 //
 
-
+var array = [first]()
 import UIKit
 
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var array = [first]()
+//    var array = [first]()
     
     var strNum = "1"
   
@@ -19,11 +19,11 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         
         let anonymousFunction = { (fetchedName: [first]) in
-            self.array = fetchedName
+            array = fetchedName
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            print(self.array[0])
+            print(array[0])
         }
         
         
@@ -67,7 +67,7 @@ class ListVC: UIViewController {
 
             let payNow = UIContextualAction(style: .normal, title: "Add to Memorized") { (action, view, nil) in
                 print("roar")
-                NotificationCenter.default.post(name: Notification.Name("element"), object: self.array[indexPath.row])
+                NotificationCenter.default.post(name: Notification.Name("element"), object: array[indexPath.row])
                 
 //                self.array.remove(at: indexPath.row)
 //                self.tableView.deleteRows(at: [indexPath], with: .right)
