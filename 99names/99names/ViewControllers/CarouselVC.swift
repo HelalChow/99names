@@ -56,8 +56,9 @@ extension CarouselVC: UICollectionViewDataSource {
 
         let arabicName = array[0].data[indexPath.row].name
         let englishName = array[0].data[indexPath.row].transliteration
+        let meaningName = array[0].data[indexPath.row].en.meaning
         
-        cell.setData(arabic: arabicName, name: englishName)
+        cell.setData(arabic: arabicName, name: englishName, meaning: meaningName)
         return cell
     }
 }

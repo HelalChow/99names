@@ -20,6 +20,13 @@
                         <rect key="frame" x="-217" y="-169" width="636" height="705"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwB-dN-EvU">
+                        <rect key="frame" x="20" y="130" width="275" height="37"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMl-tf-tZP">
                         <rect key="frame" x="20" y="39" width="275" height="59"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,10 +34,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwB-dN-EvU">
-                        <rect key="frame" x="20" y="130" width="275" height="37"/>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kip-Qe-NZW">
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="265"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                        <connections>
+                            <action selector="buttonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Ezy-q1-nrA"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abq-rN-udR">
+                        <rect key="frame" x="0.0" y="204" width="295" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -42,7 +56,9 @@
             <connections>
                 <outlet property="arabicLabel" destination="OwB-dN-EvU" id="xYc-vw-FzU"/>
                 <outlet property="imageView" destination="WWu-94-C88" id="weA-Zi-lwl"/>
-                <outlet property="nameLabel" destination="hMl-tf-tZP" id="Lw8-xg-Wgf"/>
+                <outlet property="meaningLabel" destination="abq-rN-udR" id="5ne-uC-7eV"/>
+                <outlet property="nameLabel" destination="hMl-tf-tZP" id="9uL-ZP-L2Q"/>
+                <outlet property="revealButton" destination="kip-Qe-NZW" id="3yr-rL-Zyd"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="136.27232142857142"/>
         </collectionViewCell>
