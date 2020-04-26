@@ -10,12 +10,14 @@ import UIKit
 
 class itemCell: UICollectionViewCell {
 
+
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var arabicLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func setData(arabic: String, name: String) {

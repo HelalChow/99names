@@ -21,9 +21,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMl-tf-tZP">
-                        <rect key="frame" x="20" y="61" width="275" height="37"/>
+                        <rect key="frame" x="20" y="39" width="275" height="59"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="43"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,6 +41,7 @@
             <size key="customSize" width="296" height="265"/>
             <connections>
                 <outlet property="arabicLabel" destination="OwB-dN-EvU" id="xYc-vw-FzU"/>
+                <outlet property="imageView" destination="WWu-94-C88" id="weA-Zi-lwl"/>
                 <outlet property="nameLabel" destination="hMl-tf-tZP" id="Lw8-xg-Wgf"/>
             </connections>
             <point key="canvasLocation" x="111.59420289855073" y="136.27232142857142"/>
