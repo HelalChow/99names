@@ -29,7 +29,6 @@ class ListVC: UIViewController {
         
         for num in 2...99 {
             strNum = strNum + "," + String(num)
-//            fillArray(num: num, completed: anonymousFunction)
         }
         fillArray(num: strNum, completed: anonymousFunction)
 
