@@ -53,7 +53,10 @@ extension CarouselVC: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as! itemCell
-        cell.setData(text: self.dataArray[indexPath.row])
+        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
+        print(vc.array)
+        
+//        cell.setData(text: vc.array[0].data[indexPath.row].name)
         return cell
     }
 }
