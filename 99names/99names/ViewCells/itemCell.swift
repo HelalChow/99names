@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Gemini
 
-class itemCell: UICollectionViewCell {
+class itemCell: GeminiCell {
 
 
     @IBOutlet weak var revealButton: UIButton!

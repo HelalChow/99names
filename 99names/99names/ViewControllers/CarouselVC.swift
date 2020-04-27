@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Gemini
 
 class CarouselVC: UIViewController {
 
 
-    @IBOutlet weak var collectView: UICollectionView!
+    @IBOutlet weak var collectView: GeminiCollectionView!
     
     
     
     var estimateWidth = 300.0
-    let cellMarginSize = 30.0
+    let cellMarginSize = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +25,30 @@ class CarouselVC: UIViewController {
         
         self.collectView.delegate = self
         self.collectView.dataSource = self
-//
+
         self.collectView.register(UINib(nibName: "itemCell", bundle: nil), forCellWithReuseIdentifier: "itemCell")
         setupGridView()
         
+        // Cube Animation
+        collectView.gemini
+        .cubeAnimation()
+        .cubeDegree(90)
+        
+        // Circle Animation
+//        collectView.gemini
+//        .circleRotationAnimation()
+//        .radius(450) // The radius of the circle
+//        .rotateDirection(.clockwise) // Direction of rotation.
+//        .itemRotationEnabled(true) // Whether the item rotates or not.
+        
+        // Custom Animation
+//        collectView.gemini
+//        .customAnimation()
+//            .translation(x: 0, y: 50, z: 0)
+//            .rotationAngle(x: 0, y: 13, z: 0)
+//        .ease(.easeOutExpo)
+//        .shadowEffect(.fadeIn)
+//        .maxShadowAlpha(0.3)
 
     }
     override func viewDidLayoutSubviews() {
@@ -59,11 +80,21 @@ extension CarouselVC: UICollectionViewDataSource {
         let meaningName = array[0].data[indexPath.row].en.meaning
         
         cell.setData(arabic: arabicName, name: englishName, meaning: meaningName)
+        
+        //Animate Cell
+        collectView.animateCell(cell)
+        
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // Animate
+        collectView.animateVisibleCells()
     }
 }
 
 extension CarouselVC: UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.calculateWith()
 //        return CGSize(width: width, height: width)
@@ -79,5 +110,9 @@ extension CarouselVC: UICollectionViewDelegateFlowLayout{
         return width
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = cell as? itemCell{
+            collectView.animateCell(cell)        }
+    }
     
 }
