@@ -13,10 +13,10 @@ class CarouselVC: UIViewController {
 
     @IBOutlet weak var collectView: UICollectionView!
     
-    let dataArray = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG"]
     
-    var estimateWidth = 250.0
-    let cellMarginSize = 16.0
+    
+    var estimateWidth = 300.0
+    let cellMarginSize = 30.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class CarouselVC: UIViewController {
         let flow = collectView?.collectionViewLayout as! UICollectionViewFlowLayout
         flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
         flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
-        flow.scrollDirection = .horizontal
+        flow.scrollDirection = .vertical
     }
 
 }
@@ -66,8 +66,8 @@ extension CarouselVC: UICollectionViewDataSource {
 extension CarouselVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.calculateWith()
-        return CGSize(width: width, height: width)
-//        return CGSize(width: collectionView.frame.width/1.5, height: collectionView.frame.width/1.5)
+//        return CGSize(width: width, height: width)
+        return CGSize(width: collectionView.frame.width/1.1, height: collectionView.frame.width/0.9)
     }
     func calculateWith() -> CGFloat {
         let estimatedWidth = CGFloat(estimateWidth)
