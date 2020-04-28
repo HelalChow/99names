@@ -13,7 +13,7 @@ import Gemini
 class quizCell: GeminiCell {
     
     
-    var cards = ["beige", "purple", "orange", "pink"]
+    var cards = ["beige", "purple", "teel","orange", "pink", "green"]
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var arabicLabel: UILabel!
