@@ -5,8 +5,7 @@
 //  Created by Helal Chowdhury on 4/18/20.
 //  Copyright © 2020 Helal. All rights reserved.
 //
-var indeces = [Int]()
-var indexCount = 0
+
 
 
 import UIKit
@@ -14,7 +13,7 @@ import Gemini
 
 class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
+    var newArr = array[0].data
     @IBOutlet weak var collectionView: GeminiCollectionView!
     
     override func viewDidLoad() {
@@ -25,11 +24,8 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             collectionView.dataSource = self
             collectionView.delegate = self
             
-            for i in 0...98{
-                indeces.append(i)
-            }
-            indeces.shuffle()
-            print(indeces)
+            
+            newArr.shuffle()
            
         
             // Cube animation
@@ -76,10 +72,14 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gemCell", for: indexPath) as! quizCell
             
-            let arabicName = array[0].data[indexCount % 98].name
-            let englishName = array[0].data[indexCount % 98].transliteration
-            let meaningName = array[0].data[indexCount % 98].en.meaning
-            indexCount = indexCount + 1
+//            let arabicName = array[0].data[indexPath.row].name
+//            let englishName = array[0].data[indexPath.row].transliteration
+//            let meaningName = array[0].data[indexPath.row].en.meaning
+            
+            let arabicName = newArr[indexPath.row].name
+            let englishName = newArr[indexPath.row].transliteration
+            let meaningName = newArr[indexPath.row].en.meaning
+
             
             cell.setData(arabic: arabicName, name: englishName, meaning: meaningName)
             
