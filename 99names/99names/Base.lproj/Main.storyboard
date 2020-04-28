@@ -213,6 +213,7 @@
                                         <size key="customSize" width="284" height="520"/>
                                         <connections>
                                             <outlet property="arabicLabel" destination="NmA-J5-vvm" id="LSy-7H-hHU"/>
+                                            <outlet property="cardView" destination="umc-th-dgd" id="OFK-eX-Ncl"/>
                                             <outlet property="meaningLabel" destination="XkB-xi-ZyL" id="Hn2-XR-wPU"/>
                                             <outlet property="nameLabel" destination="ir6-Si-fS1" id="uVC-h4-caT"/>
                                         </connections>

@@ -11,15 +11,22 @@ import Gemini
 
 class quizCell: GeminiCell {
     
+    var count = 0
+    var cards = ["", ""]
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var arabicLabel: UILabel!
     @IBOutlet weak var meaningLabel: UILabel!
+    @IBOutlet weak var cardView: UIImageView!
+    
+    
     
     func setData(arabic: String, name: String, meaning: String) {
         self.arabicLabel.text = arabic
         self.nameLabel.text = name
         self.meaningLabel.text = meaning
         self.meaningLabel.isHidden = true
+        self.cardView.image = UIImage(named: cards[count % cards.count])
     }
     
     
