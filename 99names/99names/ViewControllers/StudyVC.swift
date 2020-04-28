@@ -11,7 +11,6 @@ import Gemini
 
 class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    let photos = ["sky", "sky", "sky", "sky", "sky"]
     @IBOutlet weak var collectionView: GeminiCollectionView!
     
     override func viewDidLoad() {
@@ -21,15 +20,48 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             collectionView.dataSource = self
             collectionView.delegate = self
             
-            // Configure the animation
+        
+            let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+//            flow.scrollDirection = .horizontal
+        
+            // Cube animation
             collectionView.gemini
                 .cubeAnimation()
                 .cubeDegree(90)
+        
+            // yaw animation
+//            collectionView.gemini.yawRotationAnimation().degree(45)
+        
+//            collectionView.gemini.pitchRotationAnimation().degree(90)
+            
+//              collectionView.gemini.rollRotationAnimation().degree(90).rollEffect(.rollUp)
+        
+            // circle animation
+//            collectionView.gemini
+//            .circleRotationAnimation()
+//            .radius(450) // The radius of the circle
+//            .rotateDirection(.clockwise) // Direction of rotation.
+//            .itemRotationEnabled(true) // Whether the item rotates or not.
+        
+            // Custom Rotarion
+//            collectionView.gemini
+//            .customAnimation()
+//                .translation(x: 80, y: 0, z: 0)
+//                .rotationAngle(x: 0, y: 0, z: 0)
+//            .ease(.easeOutExpo)
+//            .shadowEffect(.fadeIn)
+//            .maxShadowAlpha(0.3)
+        
+            // Scale Animation
+            collectionView.gemini
+            .scaleAnimation()
+            .scale(0.7)
+            .scaleEffect(.scaleUp) // or .scaleDown
         }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             
-            return photos.count
+            return array.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
