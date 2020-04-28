@@ -16,8 +16,8 @@ class nameCell: UITableViewCell {
     @IBOutlet weak var arabicLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var checkView: UIImageView!
     
-//    var cellImage = ["purpleCell", "teelCell", "beigeCell", "pinkCell", "greenCell", "orangeCell"]
     var cellImage = ["limeCell", "waterCell", "forestCell", "blueCell"]
     
     func setCell(name: String, translation: String, arabic: String, num: String){
@@ -27,7 +27,15 @@ class nameCell: UITableViewCell {
         cellImageView.image = UIImage(named: cellImage[cellCount % cellImage.count])
         cellCount = cellCount + 1
         numberLabel.text = num
-        
+        checkView.isHidden = true
+    }
+    
+    func changeCheck(){
+        if checkView.isHidden == true{
+            checkView.isHidden = false
+        }else{
+            checkView.isHidden = true
+        }
     }
     
 }

@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainFull" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G23-EZ-bXX">
                                 <rect key="frame" x="0.0" y="108" width="375" height="644"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,12 +63,17 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="ULg-bF-OXA">
+                                                    <rect key="frame" x="18" y="59" width="15" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="arabicLabel" destination="r31-EL-TE5" id="W5t-vd-yqW"/>
                                             <outlet property="cellImageView" destination="yLm-n2-w9O" id="ofo-QS-HK7"/>
+                                            <outlet property="checkView" destination="ULg-bF-OXA" id="voS-kx-BTW"/>
                                             <outlet property="nameLabel" destination="tL8-oE-jGf" id="qua-LQ-8QI"/>
                                             <outlet property="numberLabel" destination="1bu-fs-Uv6" id="cSU-Yx-hIm"/>
                                             <outlet property="translationLabel" destination="vJS-84-GKA" id="QJW-Sc-aLd"/>
@@ -72,10 +81,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainFull" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le0-rx-6kh">
                                 <rect key="frame" x="16" y="44" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,6 +290,7 @@
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="64" height="50"/>
+        <image name="check" width="256" height="256"/>
         <image name="greenCell" width="702" height="169"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="main99" width="125" height="125"/>

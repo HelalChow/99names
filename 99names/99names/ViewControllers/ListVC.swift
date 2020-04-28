@@ -11,12 +11,13 @@ import UIKit
 
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-//    var array = [first]()
+    
     
     var strNum = "1"
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let anonymousFunction = { (fetchedName: [first]) in
             array = fetchedName
@@ -80,12 +81,17 @@ class ListVC: UIViewController {
             config.performsFirstActionWithFullSwipe = true
             return config
         }
+    
+    
 
 
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        let cell = tableView.cellForRow(at: indexPath) as! nameCell
+        cell.changeCheck()
+        
+        
         print("hello")
     }
 }
