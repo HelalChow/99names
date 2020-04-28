@@ -5,14 +5,15 @@
 //  Created by Helal Chowdhury on 4/27/20.
 //  Copyright © 2020 Helal. All rights reserved.
 //
+var count = 0
 
 import UIKit
 import Gemini
 
 class quizCell: GeminiCell {
     
-    var count = 0
-    var cards = ["", ""]
+    
+    var cards = ["beige", "purple", "orange", "pink"]
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var arabicLabel: UILabel!
@@ -26,7 +27,8 @@ class quizCell: GeminiCell {
         self.nameLabel.text = name
         self.meaningLabel.text = meaning
         self.meaningLabel.isHidden = true
-        self.cardView.image = UIImage(named: cards[count % cards.count])
+        self.cardView.image = UIImage(named: self.cards[count % cards.count])
+        count = count + 1
     }
     
     
