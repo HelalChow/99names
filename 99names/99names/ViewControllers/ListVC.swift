@@ -7,6 +7,7 @@
 //
 
 var array = [first]()
+var memList = [second]()
 import UIKit
 
 class ListVC: UIViewController {
@@ -91,8 +92,10 @@ extension ListVC: UITableViewDelegate{
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
         cell.changeCheck(num: String(indexPath.row + 1))
         
+        memList.append(array[0].data[indexPath.row])
+                
         
-        print("hello")
+        print(memList)
     }
 }
 

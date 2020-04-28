@@ -16,21 +16,13 @@ class MemorizedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let vc = storyboard?.instantiateViewController(identifier: "list") as! ListVC
-        
+                
         
         print(memorizedArray.count)
         memTableView.reloadData()
 
         memTableView.delegate = self
         memTableView.dataSource = self
-    }
-    
-    func addElement(element: first){
-        memorizedArray.append(element)
-        print(memorizedArray)
-        
     }
     
 
