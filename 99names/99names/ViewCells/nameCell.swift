@@ -17,15 +17,17 @@ class nameCell: UITableViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var numberLabel: UILabel!
     
-    var cellImage = ["greenCell", "purpleCell", "pinkCell", "orangeCell"]
+//    var cellImage = ["purpleCell", "teelCell", "beigeCell", "pinkCell", "greenCell", "orangeCell"]
+    var cellImage = ["greenCell", "teelCell"]
     
     func setCell(name: String, translation: String, arabic: String, num: String){
         nameLabel.text = name
         translationLabel.text = translation
         arabicLabel.text = arabic
-        cellImageView.image = UIImage(named: cellImage[count % cellImage.count])
+        cellImageView.image = UIImage(named: cellImage[cellCount % cellImage.count])
         cellCount = cellCount + 1
         numberLabel.text = num
+        
     }
     
 }
