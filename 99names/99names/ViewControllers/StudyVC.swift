@@ -5,11 +5,15 @@
 //  Created by Helal Chowdhury on 4/18/20.
 //  Copyright © 2020 Helal. All rights reserved.
 //
+var indeces = [Int]()
+var indexCount = 0
+
 
 import UIKit
 import Gemini
 
 class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     @IBOutlet weak var collectionView: GeminiCollectionView!
     
@@ -17,12 +21,16 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
             
+            
             collectionView.dataSource = self
             collectionView.delegate = self
             
-        
-            let flow = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-//            flow.scrollDirection = .horizontal
+            for i in 0...98{
+                indeces.append(i)
+            }
+            indeces.shuffle()
+            print(indeces)
+           
         
             // Cube animation
             collectionView.gemini
@@ -68,9 +76,10 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gemCell", for: indexPath) as! quizCell
             
-            let arabicName = array[0].data[indexPath.row].name
-            let englishName = array[0].data[indexPath.row].transliteration
-            let meaningName = array[0].data[indexPath.row].en.meaning
+            let arabicName = array[0].data[indexCount % 98].name
+            let englishName = array[0].data[indexCount % 98].transliteration
+            let meaningName = array[0].data[indexCount % 98].en.meaning
+            indexCount = indexCount + 1
             
             cell.setData(arabic: arabicName, name: englishName, meaning: meaningName)
             

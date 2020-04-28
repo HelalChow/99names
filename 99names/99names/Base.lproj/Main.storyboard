@@ -72,7 +72,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Header2" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="header3" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -338,9 +338,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Header2" width="1125" height="2436"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="greenCell" width="702" height="169"/>
+        <image name="header3" width="1125" height="2436"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="orange" width="1152" height="1224"/>
         <image name="purple" width="1152" height="1224"/>
