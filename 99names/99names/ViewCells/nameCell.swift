@@ -10,6 +10,8 @@ var cellCount = 0
 import UIKit
 
 class nameCell: UITableViewCell {
+    
+    
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var translationLabel: UILabel!
@@ -27,15 +29,18 @@ class nameCell: UITableViewCell {
         cellImageView.image = UIImage(named: cellImage[cellCount % cellImage.count])
         cellCount = cellCount + 1
         numberLabel.text = num
-        checkView.isHidden = true
+        
     }
     
-    func changeCheck(){
+    func changeCheck(num: String){
         if checkView.isHidden == true{
             checkView.isHidden = false
+            UserDefaults.standard.changeCheckMark(value: true, index: num)
         }else{
             checkView.isHidden = true
+            UserDefaults.standard.changeCheckMark(value: false, index: num)
         }
+        
     }
     
 }

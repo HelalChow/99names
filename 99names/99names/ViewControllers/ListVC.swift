@@ -89,7 +89,7 @@ class ListVC: UIViewController {
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
-        cell.changeCheck()
+        cell.changeCheck(num: String(indexPath.row + 1))
         
         
         print("hello")
@@ -102,13 +102,18 @@ extension ListVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! nameCell
-
         let name = array[0].data[indexPath.row].transliteration
         let translation = array[0].data[indexPath.row].en.meaning
         let arabic = array[0].data[indexPath.row].name
-
         cell.setCell(name: name, translation: translation, arabic: arabic, num: String(indexPath.row + 1) + ".")
+        
+        if let checked = UserDefaults.standard.getValueOfCheck(index: String(indexPath.row + 1)), checked {
+            cell.checkView.isHidden = false
+        } else {
+            cell.checkView.isHidden = true
+        }
         
         return cell
     }
