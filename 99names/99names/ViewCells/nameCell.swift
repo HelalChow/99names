@@ -18,7 +18,7 @@ class nameCell: UITableViewCell {
     @IBOutlet weak var numberLabel: UILabel!
     
 //    var cellImage = ["purpleCell", "teelCell", "beigeCell", "pinkCell", "greenCell", "orangeCell"]
-    var cellImage = ["greenCell", "teelCell"]
+    var cellImage = ["limeCell", "waterCell", "forestCell", "blueCell"]
     
     func setCell(name: String, translation: String, arabic: String, num: String){
         nameLabel.text = name
