@@ -55,7 +55,7 @@ extension MemorizedVC: UITableViewDataSource{
         let translation = memorizedArray[indexPath.row].data[0].en.meaning
         let arabic = memorizedArray[indexPath.row].data[0].name
 
-        cell.setCell(name: name, translation: translation, arabic: arabic)
+        cell.setCell(name: name, translation: translation, arabic: arabic, num: String(indexPath.row + 1) + ".")
         
         return cell
     }

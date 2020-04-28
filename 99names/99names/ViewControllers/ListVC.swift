@@ -102,7 +102,7 @@ extension ListVC: UITableViewDataSource{
         let translation = array[0].data[indexPath.row].en.meaning
         let arabic = array[0].data[indexPath.row].name
 
-        cell.setCell(name: name, translation: translation, arabic: arabic)
+        cell.setCell(name: name, translation: translation, arabic: arabic, num: String(indexPath.row + 1) + ".")
         
         return cell
     }
