@@ -19,6 +19,7 @@ class quizCell: GeminiCell {
     @IBOutlet weak var arabicLabel: UILabel!
     @IBOutlet weak var meaningLabel: UILabel!
     @IBOutlet weak var cardView: UIImageView!
+    @IBOutlet weak var originalLabel: UILabel!
     
     
     
@@ -29,6 +30,7 @@ class quizCell: GeminiCell {
         self.meaningLabel.isHidden = true
         self.cardView.image = UIImage(named: self.cards[count % cards.count])
         count = count + 1
+        self.originalLabel.text = "Tap to reveal answer"
     }
     
     
@@ -36,9 +38,11 @@ class quizCell: GeminiCell {
     @IBAction func buttonTapped(_ sender: Any) {
         if self.meaningLabel.isHidden == false{
             self.meaningLabel.isHidden = true
+            self.originalLabel.isHidden = false
         }
         else{
             self.meaningLabel.isHidden = false
+            self.originalLabel.isHidden = true
         }
     }
     
