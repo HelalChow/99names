@@ -92,22 +92,6 @@ extension ListVC: UITableViewDelegate{
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
         cell.changeCheck(num: cell.nameLabel.text!)
         
-//        if let checked = UserDefaults.standard.getValueOfCheck(index: cell.nameLabel.text!), checked {
-//            memList.append(array[0].data[indexPath.row])
-//        } else {
-//            var count = 0
-//            for i in memList{
-//                if memList[count].name == array[0].data[indexPath.row].name{
-//                    memList.remove(at: count)
-//                }
-//                count = count + 1
-//            }
-//            
-//        }
-        
-                
-        
-        print(memList)
     }
 }
 

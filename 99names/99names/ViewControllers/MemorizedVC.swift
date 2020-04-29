@@ -37,6 +37,22 @@ class MemorizedVC: UIViewController {
         memTableView.dataSource = self
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in
+               print("roar")
+            self.memorizedArray.remove(at: indexPath.row)
+            self.memTableView.deleteRows(at: [indexPath], with: .left)
+           }
+           let cell = tableView.cellForRow(at: indexPath) as! nameCell
+           cell.changeCheck(num: cell.nameLabel.text!)
+
+           remove.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+
+           let config = UISwipeActionsConfiguration(actions: [remove])
+           config.performsFirstActionWithFullSwipe = true
+           return config
+    }
+    
 
   
 }
