@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iLf-sV-qWW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hnw-cC-YJQ">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -164,6 +164,37 @@
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="847.53694581280797"/>
         </scene>
+        <!--HomeVC-->
+        <scene sceneID="fCe-CA-1PO">
+            <objects>
+                <viewController id="hnw-cC-YJQ" customClass="HomeVC" customModule="_9names" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IE7-xA-5Sj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-Et-tnU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Up To Begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5k-xc-oYd">
+                                <rect key="frame" x="0.0" y="660" width="375" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="c4m-GA-egP"/>
+                    </view>
+                    <connections>
+                        <segue destination="iLf-sV-qWW" kind="presentation" identifier="swipe" modalPresentationStyle="fullScreen" id="l1Z-s1-D03"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUF-bI-hOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="132.26600985221674"/>
+        </scene>
         <!--StudyVC-->
         <scene sceneID="bxc-fc-ZZ8">
             <objects>
@@ -287,6 +318,7 @@
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="check" width="256" height="256"/>
         <image name="greenCell" width="702" height="169"/>
+        <image name="home" width="1125" height="2436"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="mainIcon" width="100" height="85"/>
         <image name="mainIconG" width="100" height="85"/>
@@ -300,8 +332,8 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0s-F4-oJK"/>
-        <segue reference="efx-ht-hqA"/>
-        <segue reference="zrs-QO-xE3"/>
+        <segue reference="ytN-LY-AgX"/>
+        <segue reference="qpq-q5-pUv"/>
+        <segue reference="l1Z-s1-D03"/>
     </inferredMetricsTieBreakers>
 </document>
