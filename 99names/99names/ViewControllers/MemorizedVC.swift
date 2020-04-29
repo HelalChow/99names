@@ -6,13 +6,12 @@
 //  Copyright © 2020 Helal. All rights reserved.
 //
 
-var memList = [second]()
 import UIKit
 
 class MemorizedVC: UIViewController {
-
-    @IBOutlet weak var memTableView: UITableView!
     var memorizedArray = [second]()
+    @IBOutlet weak var memTableView: UITableView!
+    
     
 
     override func viewDidLoad() {
@@ -22,16 +21,11 @@ class MemorizedVC: UIViewController {
         for i in array{
             if let checked = UserDefaults.standard.getValueOfCheck(index: array[0].data[counter].transliteration), checked {
                 memorizedArray.append(array[0].data[counter])
-                
-            } else {
-       
             }
             counter = counter + 1
         }
                 
-        
-        print(memList.count)
-       
+               
 
         memTableView.delegate = self
         memTableView.dataSource = self

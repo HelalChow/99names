@@ -13,12 +13,19 @@ import Gemini
 
 class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var newArr = array[0].data
+    var newArr = [second]()
     @IBOutlet weak var collectionView: GeminiCollectionView!
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            // Do any additional setup after loading the view, typically from a nib.
+           
+            var counter = 0
+            for i in array{
+                if let checked = UserDefaults.standard.getValueOfCheck(index: array[0].data[counter].transliteration), checked {
+                    newArr.append(array[0].data[counter])
+                }
+                counter = counter + 1
+            }
             
             
             collectionView.dataSource = self
@@ -26,35 +33,7 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             
             
             newArr.shuffle()
-           
-        
-            // Cube animation
-            collectionView.gemini
-                .cubeAnimation()
-                .cubeDegree(90)
-        
-            // yaw animation
-//            collectionView.gemini.yawRotationAnimation().degree(45)
-        
-//            collectionView.gemini.pitchRotationAnimation().degree(90)
-            
-//              collectionView.gemini.rollRotationAnimation().degree(90).rollEffect(.rollUp)
-        
-            // circle animation
-//            collectionView.gemini
-//            .circleRotationAnimation()
-//            .radius(450) // The radius of the circle
-//            .rotateDirection(.clockwise) // Direction of rotation.
-//            .itemRotationEnabled(true) // Whether the item rotates or not.
-        
-            // Custom Rotarion
-//            collectionView.gemini
-//            .customAnimation()
-//                .translation(x: 80, y: 0, z: 0)
-//                .rotationAngle(x: 0, y: 0, z: 0)
-//            .ease(.easeOutExpo)
-//            .shadowEffect(.fadeIn)
-//            .maxShadowAlpha(0.3)
+     
         
             // Scale Animation
             collectionView.gemini
@@ -65,7 +44,7 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             
-            return array.count
+            return newArr.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
