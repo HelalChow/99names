@@ -152,7 +152,7 @@
                                 <state key="normal" image="reviewIcon"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="4Lj-Cl-lVE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Review" image="book.fill" catalog="system" id="Gby-N4-g7w"/>
@@ -301,7 +301,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b0s-F4-oJK"/>
-        <segue reference="qpq-q5-pUv"/>
+        <segue reference="efx-ht-hqA"/>
         <segue reference="zrs-QO-xE3"/>
     </inferredMetricsTieBreakers>
 </document>
