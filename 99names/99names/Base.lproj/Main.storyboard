@@ -109,6 +109,9 @@
                                 <rect key="frame" x="318" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="settingIcon"/>
+                                <connections>
+                                    <segue destination="dlW-ru-b40" kind="presentation" id="kfe-Ho-Axh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -190,6 +193,31 @@
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="847.53694581280797"/>
         </scene>
+        <!--SettingVC-->
+        <scene sceneID="o30-zh-Hps">
+            <objects>
+                <viewController id="dlW-ru-b40" customClass="SettingVC" customModule="_9names" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YNy-Iq-bEv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG7-Gk-ctz">
+                                <rect key="frame" x="68" y="255" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="DtP-rk-iyO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="EYg-cf-dV6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbi-EA-SDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="125.61576354679804"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="fCe-CA-1PO">
             <objects>
@@ -219,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUF-bI-hOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.800000000000001" y="132.26600985221674"/>
+            <point key="canvasLocation" x="-294" y="127"/>
         </scene>
         <!--StudyVC-->
         <scene sceneID="bxc-fc-ZZ8">
@@ -319,7 +347,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4A-mM-w6P">
-                                <rect key="frame" x="170" y="736" width="35" height="35"/>
+                                <rect key="frame" x="171" y="737" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="reviewIconG"/>
@@ -373,9 +401,9 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0s-F4-oJK"/>
-        <segue reference="2S4-wi-d1U"/>
+        <segue reference="ytN-LY-AgX"/>
+        <segue reference="lsd-DI-HEg"/>
         <segue reference="efx-ht-hqA"/>
-        <segue reference="zrs-QO-xE3"/>
+        <segue reference="uGG-RX-3b4"/>
     </inferredMetricsTieBreakers>
 </document>

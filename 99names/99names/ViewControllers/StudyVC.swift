@@ -15,10 +15,11 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var newArr = [second]()
     @IBOutlet weak var collectionView: GeminiCollectionView!
+    let review = reviewService.shared
     
     override func viewDidLoad() {
             super.viewDidLoad()
-           
+        
             var counter = 0
             for i in array{
                 if let checked = UserDefaults.standard.getValueOfCheck(index: array[0].data[counter].transliteration), checked {
@@ -41,6 +42,15 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             .scale(0.7)
             .scaleEffect(.scaleUp) // or .scaleDown
         }
+    
+    //Leave Review
+    override func viewDidAppear(_ animated: Bool) {
+        let deadline = DispatchTime.now() + .seconds(4)
+        DispatchQueue.main.asyncAfter(deadline: deadline) { [self] in
+            self.review.requestReview()
+        }
+        
+    }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             

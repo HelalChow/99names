@@ -10,6 +10,8 @@
 		1B6A07F32458DAB6007C93DA /* userDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A07F22458DAB6007C93DA /* userDefaults.swift */; };
 		1B6A07F524594530007C93DA /* nameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6A07F424594530007C93DA /* nameCell.xib */; };
 		1B6A07F724597AE4007C93DA /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A07F624597AE4007C93DA /* HomeVC.swift */; };
+		1B6A07F9245A3993007C93DA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A07F8245A3993007C93DA /* SettingVC.swift */; };
+		1B6A07FC245A3D7C007C93DA /* reviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6A07FB245A3D7C007C93DA /* reviewService.swift */; };
 		1BCD189B2448F47D0047F83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD189A2448F47D0047F83F /* AppDelegate.swift */; };
 		1BCD189D2448F47D0047F83F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD189C2448F47D0047F83F /* SceneDelegate.swift */; };
 		1BCD18A22448F47D0047F83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BCD18A02448F47D0047F83F /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		1B6A07F22458DAB6007C93DA /* userDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDefaults.swift; sourceTree = "<group>"; };
 		1B6A07F424594530007C93DA /* nameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nameCell.xib; sourceTree = "<group>"; };
 		1B6A07F624597AE4007C93DA /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		1B6A07F8245A3993007C93DA /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		1B6A07FB245A3D7C007C93DA /* reviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewService.swift; sourceTree = "<group>"; };
 		1BCD18972448F47D0047F83F /* 99names.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 99names.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCD189A2448F47D0047F83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCD189C2448F47D0047F83F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B6A07FA245A3D64007C93DA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				1B6A07F22458DAB6007C93DA /* userDefaults.swift */,
+				1B6A07FB245A3D7C007C93DA /* reviewService.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		1BCD188E2448F47D0047F83F = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 		1BCD18992448F47D0047F83F /* 99names */ = {
 			isa = PBXGroup;
 			children = (
+				1B6A07FA245A3D64007C93DA /* Misc */,
 				1BCD18E2244B67E70047F83F /* ViewCells */,
 				1BCD18E1244B67D40047F83F /* ViewControllers */,
 				1BCD189A2448F47D0047F83F /* AppDelegate.swift */,
@@ -146,7 +160,6 @@
 				1BCD18A32448F47F0047F83F /* Assets.xcassets */,
 				1BCD18A52448F47F0047F83F /* LaunchScreen.storyboard */,
 				1BCD18A82448F47F0047F83F /* Info.plist */,
-				1B6A07F22458DAB6007C93DA /* userDefaults.swift */,
 			);
 			path = 99names;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 				1BCD18CA2448F7850047F83F /* ListVC.swift */,
 				1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */,
 				1B6A07F624597AE4007C93DA /* HomeVC.swift */,
+				1B6A07F8245A3993007C93DA /* SettingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF6BBC424523A1D00B2D2A3 /* itemCell.swift in Sources */,
+				1B6A07FC245A3D7C007C93DA /* reviewService.swift in Sources */,
 				1BCD18CB2448F7850047F83F /* ListVC.swift in Sources */,
 				1BCD189B2448F47D0047F83F /* AppDelegate.swift in Sources */,
 				1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */,
@@ -471,6 +486,7 @@
 				1B6A07F724597AE4007C93DA /* HomeVC.swift in Sources */,
 				1BF6BC0B24578F2D00B2D2A3 /* quizCell.swift in Sources */,
 				1BCD18D5244B34110047F83F /* MemorizedVC.swift in Sources */,
+				1B6A07F9245A3993007C93DA /* SettingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
