@@ -16,10 +16,11 @@ class MemorizedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        memorizedArray = array
                 
         
         print(memorizedArray.count)
-        memTableView.reloadData()
+       
 
         memTableView.delegate = self
         memTableView.dataSource = self
@@ -31,22 +32,23 @@ class MemorizedVC: UIViewController {
 extension MemorizedVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("hello")
+        print("hi")
     }
 }
 
 extension MemorizedVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memorizedArray.count
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! nameCell
+        memTableView.register(UINib(nibName: "nameCell", bundle: nil), forCellReuseIdentifier: "nameCell")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell") as! nameCell
 
-        let name = memorizedArray[indexPath.row].data[0].transliteration
-        let translation = memorizedArray[indexPath.row].data[0].en.meaning
-        let arabic = memorizedArray[indexPath.row].data[0].name
-
+        let name = array[0].data[indexPath.row].transliteration
+        let translation = array[0].data[indexPath.row].en.meaning
+        let arabic = array[0].data[indexPath.row].name
         cell.setCell(name: name, translation: translation, arabic: arabic, num: String(indexPath.row + 1) + ".")
         
         return cell
