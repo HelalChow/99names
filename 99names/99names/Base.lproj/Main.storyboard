@@ -97,12 +97,18 @@
                                     <segue destination="md3-Rm-5Bg" kind="presentation" modalPresentationStyle="fullScreen" id="qpq-q5-pUv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F52-1Q-YTE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-V3-CuC">
+                                <rect key="frame" x="22" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="xwJ-E2-bOw"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="rlv-n4-Lja"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-ai-9oH">
+                                <rect key="frame" x="318" y="740" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingIcon"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -128,7 +134,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-Zg-ILc">
                                 <rect key="frame" x="0.0" y="89" width="375" height="723"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reviewScreen" translatesAutoresizingMaskIntoConstraints="NO" id="vFt-Sk-Zgc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -158,12 +164,18 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="reviewIcon"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sua-JV-r6j">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-CX-z2w">
+                                <rect key="frame" x="22" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="xUB-8r-ULy"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="2S4-wi-d1U"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-Zs-oyH">
+                                <rect key="frame" x="318" y="740" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingIcon"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -197,27 +209,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHN-vV-fDE">
-                                <rect key="frame" x="209" y="193" width="141" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="iLf-sV-qWW" kind="presentation" modalPresentationStyle="fullScreen" id="xNY-1V-seI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwg-ij-9Wn">
-                                <rect key="frame" x="25" y="350" width="141" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="md3-Rm-5Bg" kind="presentation" modalPresentationStyle="fullScreen" id="L2Y-Hb-eDi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewW-Bx-2qr">
-                                <rect key="frame" x="209" y="511" width="141" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="jga-70-XPK" kind="presentation" modalPresentationStyle="fullScreen" id="qMq-G3-gR9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="c4m-GA-egP"/>
@@ -336,12 +327,18 @@
                                     <segue destination="md3-Rm-5Bg" kind="presentation" modalPresentationStyle="fullScreen" id="efx-ht-hqA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOl-BZ-n8F">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpn-cz-Y9h">
+                                <rect key="frame" x="23" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="807-bm-3BX"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="lsd-DI-HEg"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYF-ZM-NNj">
+                                <rect key="frame" x="319" y="740" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingIcon"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -361,6 +358,7 @@
         <image name="check" width="256" height="256"/>
         <image name="greenCell" width="702" height="169"/>
         <image name="home" width="1125" height="2436"/>
+        <image name="homeIcon" width="100" height="85"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="mainIcon" width="100" height="85"/>
         <image name="mainIconG" width="100" height="85"/>
@@ -369,14 +367,15 @@
         <image name="reviewIcon" width="100" height="85"/>
         <image name="reviewIconG" width="100" height="85"/>
         <image name="reviewScreen" width="1125" height="2436"/>
+        <image name="settingIcon" width="100" height="85"/>
         <image name="studyIcon" width="100" height="85"/>
         <image name="studyIconG" width="100" height="85"/>
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytN-LY-AgX"/>
-        <segue reference="xUB-8r-ULy"/>
-        <segue reference="qpq-q5-pUv"/>
+        <segue reference="b0s-F4-oJK"/>
+        <segue reference="2S4-wi-d1U"/>
+        <segue reference="efx-ht-hqA"/>
         <segue reference="zrs-QO-xE3"/>
     </inferredMetricsTieBreakers>
 </document>
