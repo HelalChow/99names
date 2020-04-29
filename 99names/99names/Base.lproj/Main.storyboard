@@ -66,14 +66,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="arabicLabel" destination="r31-EL-TE5" id="W5t-vd-yqW"/>
-                                            <outlet property="cellImageView" destination="yLm-n2-w9O" id="ofo-QS-HK7"/>
-                                            <outlet property="checkView" destination="ULg-bF-OXA" id="voS-kx-BTW"/>
-                                            <outlet property="nameLabel" destination="tL8-oE-jGf" id="qua-LQ-8QI"/>
-                                            <outlet property="numberLabel" destination="1bu-fs-Uv6" id="cSU-Yx-hIm"/>
-                                            <outlet property="translationLabel" destination="vJS-84-GKA" id="QJW-Sc-aLd"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -126,7 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-Zg-ILc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-Zg-ILc">
                                 <rect key="frame" x="0.0" y="89" width="375" height="723"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -308,8 +300,8 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytN-LY-AgX"/>
+        <segue reference="b0s-F4-oJK"/>
         <segue reference="qpq-q5-pUv"/>
-        <segue reference="uGG-RX-3b4"/>
+        <segue reference="zrs-QO-xE3"/>
     </inferredMetricsTieBreakers>
 </document>

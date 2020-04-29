@@ -105,8 +105,9 @@ extension ListVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.tableView.register(UINib(nibName: "nameCell", bundle: nil), forCellReuseIdentifier: "nameCell")
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! nameCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell") as! nameCell
         let name = array[0].data[indexPath.row].transliteration
         let translation = array[0].data[indexPath.row].en.meaning
         let arabic = array[0].data[indexPath.row].name
