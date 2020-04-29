@@ -7,7 +7,7 @@
 //
 
 var array = [first]()
-var memList = [second]()
+
 import UIKit
 
 class ListVC: UIViewController {
@@ -90,9 +90,21 @@ class ListVC: UIViewController {
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
-        cell.changeCheck(num: String(indexPath.row + 1))
+        cell.changeCheck(num: cell.nameLabel.text!)
         
-        memList.append(array[0].data[indexPath.row])
+//        if let checked = UserDefaults.standard.getValueOfCheck(index: cell.nameLabel.text!), checked {
+//            memList.append(array[0].data[indexPath.row])
+//        } else {
+//            var count = 0
+//            for i in memList{
+//                if memList[count].name == array[0].data[indexPath.row].name{
+//                    memList.remove(at: count)
+//                }
+//                count = count + 1
+//            }
+//            
+//        }
+        
                 
         
         print(memList)
@@ -113,7 +125,7 @@ extension ListVC: UITableViewDataSource{
         let arabic = array[0].data[indexPath.row].name
         cell.setCell(name: name, translation: translation, arabic: arabic, num: String(indexPath.row + 1) + ".")
         
-        if let checked = UserDefaults.standard.getValueOfCheck(index: String(indexPath.row + 1)), checked {
+        if let checked = UserDefaults.standard.getValueOfCheck(index: String(name)), checked {
             cell.checkView.isHidden = false
         } else {
             cell.checkView.isHidden = true
