@@ -20,7 +20,6 @@ class nameCell: UITableViewCell {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var checkView: UIImageView!
     
-//    var cellImage = ["limeCell", "waterCell", "forestCell", "blueCell"]
     var cellImage = ["greenCell2", "purpleCell2", "beigeCell2", "teelCell2", "pinkCell2"]
     
     func setCell(name: String, translation: String, arabic: String, num: String){
