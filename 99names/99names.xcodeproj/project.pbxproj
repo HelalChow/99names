@@ -21,7 +21,7 @@
 		1BCD18D5244B34110047F83F /* MemorizedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D4244B34110047F83F /* MemorizedVC.swift */; };
 		1BCD18D7244B497C0047F83F /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD18D6244B497C0047F83F /* StudyVC.swift */; };
 		1BF6BBC424523A1D00B2D2A3 /* itemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */; };
-		1BF6BBC524523A1D00B2D2A3 /* itemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */; };
+		1BF6BBC524523A1D00B2D2A3 /* nameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC324523A1D00B2D2A3 /* nameCell.xib */; };
 		1BF6BBC724523B2B00B2D2A3 /* CarouselVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */; };
 		1BF6BC0B24578F2D00B2D2A3 /* quizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF6BC0A24578F2D00B2D2A3 /* quizCell.swift */; };
 		38F0BF90117A7FE2DBC9F257 /* Pods_99names.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEDAD9D8A8239F9A0726BFE /* Pods_99names.framework */; };
@@ -68,7 +68,7 @@
 		1BCD18D4244B34110047F83F /* MemorizedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizedVC.swift; sourceTree = "<group>"; };
 		1BCD18D6244B497C0047F83F /* StudyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyVC.swift; sourceTree = "<group>"; };
 		1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemCell.swift; sourceTree = "<group>"; };
-		1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemCell.xib; sourceTree = "<group>"; };
+		1BF6BBC324523A1D00B2D2A3 /* nameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = nameCell.xib; sourceTree = "<group>"; };
 		1BF6BBC624523B2B00B2D2A3 /* CarouselVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselVC.swift; sourceTree = "<group>"; };
 		1BF6BC0A24578F2D00B2D2A3 /* quizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizCell.swift; sourceTree = "<group>"; };
 		76190C0CE9DCDD066390E48A /* Pods-99namesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-99namesTests.debug.xcconfig"; path = "Target Support Files/Pods-99namesTests/Pods-99namesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 				1BCD18CE244903700047F83F /* nameCell.swift */,
 				1BCD18D0244912B20047F83F /* object.swift */,
 				1BF6BBC224523A1D00B2D2A3 /* itemCell.swift */,
-				1BF6BBC324523A1D00B2D2A3 /* itemCell.xib */,
+				1BF6BBC324523A1D00B2D2A3 /* nameCell.xib */,
 				1BF6BC0A24578F2D00B2D2A3 /* quizCell.swift */,
 			);
 			path = ViewCells;
@@ -321,7 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF6BBC524523A1D00B2D2A3 /* itemCell.xib in Resources */,
+				1BF6BBC524523A1D00B2D2A3 /* nameCell.xib in Resources */,
 				1BCD18A72448F47F0047F83F /* LaunchScreen.storyboard in Resources */,
 				1BCD18A42448F47F0047F83F /* Assets.xcassets in Resources */,
 				1BCD18A22448F47D0047F83F /* Main.storyboard in Resources */,
