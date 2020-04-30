@@ -20,6 +20,10 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
+//        tableView.estimatedRowHeight = 105.0
+//        tableView.rowHeight = UITableView.automaticDimension
+        
+        
         let anonymousFunction = { (fetchedName: [first]) in
             array = fetchedName
             DispatchQueue.main.async {

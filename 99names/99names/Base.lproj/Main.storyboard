@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G23-EZ-bXX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G23-EZ-bXX">
                                 <rect key="frame" x="0.0" y="89" width="375" height="723"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="jyT-vq-e8b" customClass="nameCell" customModule="_9names" customModuleProvider="target">
@@ -69,9 +68,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mainScreen" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreen" translatesAutoresizingMaskIntoConstraints="NO" id="WXL-16-r5h">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-bY-QFE">
                                 <rect key="frame" x="243" y="738" width="32" height="32"/>
@@ -115,6 +113,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WXL-16-r5h" firstAttribute="top" secondItem="3es-em-G5U" secondAttribute="top" id="04s-fC-2Of"/>
+                            <constraint firstItem="WXL-16-r5h" firstAttribute="leading" secondItem="U6O-WH-4HH" secondAttribute="leading" id="5cl-g1-qAN"/>
+                            <constraint firstItem="WXL-16-r5h" firstAttribute="trailing" secondItem="U6O-WH-4HH" secondAttribute="trailing" id="EGw-BX-vtg"/>
+                            <constraint firstAttribute="bottom" secondItem="WXL-16-r5h" secondAttribute="bottom" id="U8L-d9-Wvk"/>
+                            <constraint firstItem="G23-EZ-bXX" firstAttribute="trailing" secondItem="U6O-WH-4HH" secondAttribute="trailing" id="fFz-p3-LCj"/>
+                            <constraint firstItem="G23-EZ-bXX" firstAttribute="top" secondItem="U6O-WH-4HH" secondAttribute="top" constant="45" id="faL-dl-RQV"/>
+                            <constraint firstItem="G23-EZ-bXX" firstAttribute="leading" secondItem="U6O-WH-4HH" secondAttribute="leading" id="gdH-fV-IHe"/>
+                            <constraint firstAttribute="bottom" secondItem="G23-EZ-bXX" secondAttribute="bottom" id="ycs-gA-jrY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="U6O-WH-4HH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Full List" image="list.dash" catalog="system" id="dbL-HX-lIn"/>
@@ -512,10 +520,10 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qya-M9-aVG"/>
-        <segue reference="oIW-jG-uZr"/>
+        <segue reference="ytN-LY-AgX"/>
+        <segue reference="rlv-n4-Lja"/>
         <segue reference="kfe-Ho-Axh"/>
-        <segue reference="7tO-hH-pen"/>
+        <segue reference="qpq-q5-pUv"/>
         <segue reference="l1Z-s1-D03"/>
     </inferredMetricsTieBreakers>
 </document>
