@@ -16,7 +16,7 @@ class MemorizedVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.memTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         var counter = 0
         for i in array{
             if let checked = UserDefaults.standard.getValueOfCheck(index: array[0].data[counter].transliteration), checked {
@@ -33,7 +33,6 @@ class MemorizedVC: UIViewController {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in
-               print("roar")
             self.memorizedArray.remove(at: indexPath.row)
             self.memTableView.deleteRows(at: [indexPath], with: .left)
            }

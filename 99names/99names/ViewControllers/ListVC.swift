@@ -18,7 +18,7 @@ class ListVC: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         let anonymousFunction = { (fetchedName: [first]) in
             array = fetchedName
