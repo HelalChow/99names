@@ -10,6 +10,7 @@ import UIKit
 
 class SettingVC: UIViewController {
 
+    let app = UIApplication.shared
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,4 +23,9 @@ class SettingVC: UIViewController {
     }
     
 
+    @IBAction func reviewClicked(_ sender: Any) {
+        let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/waze-navigation-live-traffic/id323229106?action=write-review")!
+        app.open(appStoreUrl)
+    }
+    
 }

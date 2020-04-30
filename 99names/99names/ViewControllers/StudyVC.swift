@@ -44,13 +44,13 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         }
     
     //Leave Review
-    override func viewDidAppear(_ animated: Bool) {
-        let deadline = DispatchTime.now() + .seconds(4)
-        DispatchQueue.main.asyncAfter(deadline: deadline) { [self] in
-            self.review.requestReview()
-        }
-        
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        let deadline = DispatchTime.now() + .seconds(4)
+//        DispatchQueue.main.asyncAfter(deadline: deadline) { [self] in
+//            self.review.requestReview()
+//        }
+//
+//    }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             

@@ -22,5 +22,6 @@ extension UserDefaults{
     func getValueOfCheck(index: String) -> Bool? {
         return UserDefaults.standard.value(forKey: index) as? Bool
     }
+
     
 }

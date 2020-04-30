@@ -209,6 +209,14 @@
                                     <action selector="shareClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="DtP-rk-iyO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJi-rL-Gb7">
+                                <rect key="frame" x="74" y="358" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="reviewClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="xQW-xf-4wG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EYg-cf-dV6"/>
