@@ -326,18 +326,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Up To Begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5k-xc-oYd">
-                                <rect key="frame" x="0.0" y="696" width="375" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up To Begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5k-xc-oYd">
+                                <rect key="frame" x="0.0" y="714.33333333333337" width="375" height="32.666666666666629"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e5k-xc-oYd" secondAttribute="bottom" constant="65" id="4PA-sJ-rOP"/>
+                            <constraint firstAttribute="trailing" secondItem="e5k-xc-oYd" secondAttribute="trailing" id="Q45-zO-gPG"/>
+                            <constraint firstItem="e5k-xc-oYd" firstAttribute="leading" secondItem="IE7-xA-5Sj" secondAttribute="leading" id="hCb-ka-fWQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c4m-GA-egP"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="7k0-Et-tnU" id="CMK-0F-B6Q"/>
                         <segue destination="iLf-sV-qWW" kind="presentation" identifier="swipe" modalPresentationStyle="fullScreen" id="l1Z-s1-D03"/>
                     </connections>
                 </viewController>
@@ -511,6 +516,6 @@
         <segue reference="oIW-jG-uZr"/>
         <segue reference="kfe-Ho-Axh"/>
         <segue reference="7tO-hH-pen"/>
-        <segue reference="bqe-se-evo"/>
+        <segue reference="l1Z-s1-D03"/>
     </inferredMetricsTieBreakers>
 </document>

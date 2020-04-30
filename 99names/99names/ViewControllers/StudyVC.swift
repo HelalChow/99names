@@ -92,7 +92,17 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             }
             
         }
-
+    
+    //Lock orientation
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        appUtility.lockOrientation(.portrait)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        appUtility.lockOrientation(.all)
+    }
+
+}
 
 
