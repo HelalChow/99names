@@ -102,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="rlv-n4-Lja"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="rlv-n4-Lja"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-ai-9oH">
@@ -110,11 +110,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="settingIcon"/>
                                 <connections>
-                                    <segue destination="dlW-ru-b40" kind="presentation" id="kfe-Ho-Axh"/>
+                                    <segue destination="dlW-ru-b40" kind="presentation" modalPresentationStyle="fullScreen" id="kfe-Ho-Axh"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="U6O-WH-4HH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Full List" image="list.dash" catalog="system" id="dbL-HX-lIn"/>
@@ -172,16 +172,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="2S4-wi-d1U"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="2S4-wi-d1U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-Zs-oyH">
                                 <rect key="frame" x="318" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="settingIcon"/>
+                                <connections>
+                                    <segue destination="dlW-ru-b40" kind="presentation" modalPresentationStyle="fullScreen" id="B9T-bm-31U"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4Lj-Cl-lVE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Review" image="book.fill" catalog="system" id="Gby-N4-g7w"/>
@@ -198,27 +201,112 @@
             <objects>
                 <viewController id="dlW-ru-b40" customClass="SettingVC" customModule="_9names" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YNy-Iq-bEv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG7-Gk-ctz">
-                                <rect key="frame" x="68" y="255" width="58" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="KpT-BE-3aV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-iH-22S">
+                                <rect key="frame" x="0.0" y="133" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="beigeCell2"/>
                                 <connections>
-                                    <action selector="shareClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="DtP-rk-iyO"/>
+                                    <action selector="contactClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="bsP-39-SQ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJi-rL-Gb7">
-                                <rect key="frame" x="74" y="358" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jb-gb-jcg">
+                                <rect key="frame" x="0.0" y="359" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="greenCell2"/>
                                 <connections>
-                                    <action selector="reviewClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="xQW-xf-4wG"/>
+                                    <action selector="shareClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="Dwg-IY-Pl6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9z-yw-Yh0">
+                                <rect key="frame" x="0.0" y="246" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="purpleCell2"/>
+                                <connections>
+                                    <action selector="reviewClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="6iw-Fv-tMT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXf-If-XbC">
+                                <rect key="frame" x="33" y="155" width="208" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leave a Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc8-6N-YR3">
+                                <rect key="frame" x="33" y="270" width="200" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-uP-UaT">
+                                <rect key="frame" x="33" y="374" width="200" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-Lr-gNY">
+                                <rect key="frame" x="244" y="740" width="31" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="studyIconG"/>
+                                <connections>
+                                    <segue destination="jga-70-XPK" kind="presentation" modalPresentationStyle="fullScreen" id="qya-M9-aVG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOu-Wa-7K1">
+                                <rect key="frame" x="99" y="738" width="35" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="mainIconG"/>
+                                <connections>
+                                    <segue destination="iLf-sV-qWW" kind="presentation" modalPresentationStyle="fullScreen" id="bqe-se-evo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVP-Xt-hSx">
+                                <rect key="frame" x="171" y="738" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="reviewIconG"/>
+                                <connections>
+                                    <segue destination="md3-Rm-5Bg" kind="presentation" modalPresentationStyle="fullScreen" id="7tO-hH-pen"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0A-3C-CKI">
+                                <rect key="frame" x="22" y="740" width="35" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="homeIcon"/>
+                                <connections>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="oIW-jG-uZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-1m-wEB">
+                                <rect key="frame" x="311" y="733" width="50" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingIcon"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ILA-5K-Eo3">
+                                <rect key="frame" x="271" y="152" width="75" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.and.ellipsis.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-4N-k4V">
+                                <rect key="frame" x="268" y="259" width="80" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowshape.turn.up.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0i5-Or-uru">
+                                <rect key="frame" x="271" y="375.66666666666663" width="75" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="EYg-cf-dV6"/>
                     </view>
                 </viewController>
@@ -246,7 +334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="c4m-GA-egP"/>
                     </view>
                     <connections>
@@ -368,13 +456,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="homeIcon"/>
                                 <connections>
-                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" id="lsd-DI-HEg"/>
+                                    <segue destination="hnw-cC-YJQ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="lsd-DI-HEg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYF-ZM-NNj">
                                 <rect key="frame" x="319" y="740" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="settingIcon"/>
+                                <connections>
+                                    <segue destination="dlW-ru-b40" kind="presentation" modalPresentationStyle="fullScreen" id="MDE-MZ-RUS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,28 +481,36 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="64" height="52"/>
+        <image name="beigeCell2" width="702" height="169"/>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="check" width="256" height="256"/>
         <image name="greenCell" width="702" height="169"/>
+        <image name="greenCell2" width="702" height="169"/>
         <image name="home" width="1125" height="2436"/>
         <image name="homeIcon" width="100" height="85"/>
         <image name="list.dash" catalog="system" width="64" height="42"/>
         <image name="mainIcon" width="100" height="85"/>
         <image name="mainIconG" width="100" height="85"/>
         <image name="mainScreen" width="1125" height="2436"/>
+        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
+        <image name="person" catalog="system" width="64" height="58"/>
         <image name="purple" width="1152" height="1224"/>
+        <image name="purpleCell2" width="702" height="169"/>
         <image name="reviewIcon" width="100" height="85"/>
         <image name="reviewIconG" width="100" height="85"/>
         <image name="reviewScreen" width="1125" height="2436"/>
         <image name="settingIcon" width="100" height="85"/>
+        <image name="settingScreen" width="1125" height="2436"/>
         <image name="studyIcon" width="100" height="85"/>
         <image name="studyIconG" width="100" height="85"/>
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ytN-LY-AgX"/>
-        <segue reference="lsd-DI-HEg"/>
-        <segue reference="efx-ht-hqA"/>
-        <segue reference="uGG-RX-3b4"/>
+        <segue reference="qya-M9-aVG"/>
+        <segue reference="oIW-jG-uZr"/>
+        <segue reference="kfe-Ho-Axh"/>
+        <segue reference="7tO-hH-pen"/>
+        <segue reference="bqe-se-evo"/>
     </inferredMetricsTieBreakers>
 </document>

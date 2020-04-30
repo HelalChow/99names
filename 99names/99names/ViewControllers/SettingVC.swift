@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingVC: UIViewController {
 
@@ -28,4 +29,28 @@ class SettingVC: UIViewController {
         app.open(appStoreUrl)
     }
     
+    @IBAction func contactClicked(_ sender: Any) {
+        showMailComposer()
+    }
+    
+    func showMailComposer(){
+        guard MFMailComposeViewController.canSendMail() else{
+            return
+        }
+        
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self
+        composer.setToRecipients(["hchowdhury3273@gmail.com"])
+        present(composer, animated: true)
+    }
+    
+    
+}
+
+extension SettingVC: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if let _ = error {
+            controller.dismiss(animated: true)
+        }
+    }
 }
