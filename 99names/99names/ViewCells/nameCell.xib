@@ -44,14 +44,21 @@
                         <rect key="frame" x="15" y="63" width="18" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="arabicll" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ph-Ej-RIS">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="arabicllxececce" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ph-Ej-RIS">
                         <rect key="frame" x="275" y="26" width="80" height="51"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="x99-ig-jgB"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="3ph-Ej-RIS" secondAttribute="bottom" constant="28" id="7Df-nF-uJd"/>
+                    <constraint firstItem="3ph-Ej-RIS" firstAttribute="top" secondItem="SPH-do-c9e" secondAttribute="top" constant="26" id="Kh7-vV-PHY"/>
+                    <constraint firstAttribute="trailing" secondItem="3ph-Ej-RIS" secondAttribute="trailing" constant="20" id="nsu-zr-nk7"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
