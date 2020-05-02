@@ -40,7 +40,7 @@ class SettingVC: UIViewController {
         
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients(["hchowdhury3273@gmail.com"])
+        composer.setToRecipients(["hchowdhury3273@hotmail.com"])
         present(composer, animated: true)
     }
     

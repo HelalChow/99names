@@ -43,11 +43,7 @@ class MemorizedVC: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        if memorizedArray.isEmpty == false{
-//            errorLabel.isHidden = true
-//        }
-//    }
+
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in

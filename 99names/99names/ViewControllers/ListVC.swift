@@ -29,14 +29,26 @@ class ListVC: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            print(array[0])
+//            UserDefaults.standard.storeList(array: array)
+//            UserDefaults.standard.changeOnce(value: false)
+//            print(array[0])
         }
         
-        
+        // check if array API has been called already
+//        if let check = UserDefaults.standard.getOnce(), check {
+//            array = UserDefaults.standard.getList()
+//        } else {
+//            for num in 2...99 {
+//                strNum = strNum + "," + String(num)
+//            }
+//            fillArray(num: strNum, completed: anonymousFunction)
+//        }
         for num in 2...99 {
             strNum = strNum + "," + String(num)
         }
         fillArray(num: strNum, completed: anonymousFunction)
+        
+        
 
         tableView.delegate = self
         tableView.dataSource = self
