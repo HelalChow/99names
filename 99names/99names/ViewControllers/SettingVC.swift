@@ -25,7 +25,7 @@ class SettingVC: UIViewController {
     
 
     @IBAction func reviewClicked(_ sender: Any) {
-        let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/waze-navigation-live-traffic/idxxxxxxxxx?action=write-review")!
+        let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/waze-navigation-live-traffic/id1511060662?action=write-review")!
         app.open(appStoreUrl)
     }
     

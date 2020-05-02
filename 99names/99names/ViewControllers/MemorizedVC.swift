@@ -24,22 +24,42 @@ class MemorizedVC: UIViewController {
             }
             counter = counter + 1
         }
-                
-               
+        
+        
+        checkError()
 
         memTableView.delegate = self
         memTableView.dataSource = self
     }
     
+    func checkError(){
+        if memorizedArray.isEmpty == false{
+            errorLabel.isHidden = true
+        }
+        else{
+            errorLabel.isHidden = false
+        }
+    }
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        if memorizedArray.isEmpty == false{
+//            errorLabel.isHidden = true
+//        }
+//    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in
             self.memorizedArray.remove(at: indexPath.row)
             self.memTableView.deleteRows(at: [indexPath], with: .left)
+            self.checkError()
            }
            let cell = tableView.cellForRow(at: indexPath) as! nameCell
            cell.changeCheck(num: cell.nameLabel.text!)
 
            remove.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+           
 
            let config = UISwipeActionsConfiguration(actions: [remove])
            config.performsFirstActionWithFullSwipe = true

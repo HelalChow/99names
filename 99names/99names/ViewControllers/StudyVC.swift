@@ -28,6 +28,9 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 counter = counter + 1
             }
             
+            if newArr.isEmpty == false{
+                errorLabel2.isHidden = true
+            }
             
             collectionView.dataSource = self
             collectionView.delegate = self
@@ -42,6 +45,9 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             .scale(0.7)
             .scaleEffect(.scaleUp) // or .scaleDown
         }
+    @IBOutlet weak var errorLabel2: UILabel!
+    
+
     
     //Leave Review
 //    override func viewDidAppear(_ animated: Bool) {
@@ -60,10 +66,7 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gemCell", for: indexPath) as! quizCell
-            
-//            let arabicName = array[0].data[indexPath.row].name
-//            let englishName = array[0].data[indexPath.row].transliteration
-//            let meaningName = array[0].data[indexPath.row].en.meaning
+
             
             let arabicName = newArr[indexPath.row].name
             let englishName = newArr[indexPath.row].transliteration
