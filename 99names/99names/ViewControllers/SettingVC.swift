@@ -18,14 +18,14 @@ class SettingVC: UIViewController {
     }
     
     @IBAction func shareClicked(_ sender: Any) {
-        let shareVC = UIActivityViewController(activityItems: ["Join me in memorizing the Most Beautiful names with the '99 Names of Allah with this app'"], applicationActivities: nil)
+        let shareVC = UIActivityViewController(activityItems: ["Join me in memorizing the 99 names of Allah names with: https://itunes.apple.com/us/app/99-names-of-allah-memorize/id1511060662"], applicationActivities: nil)
         shareVC.popoverPresentationController?.sourceView = self.view
         self.present(shareVC, animated: true, completion: nil)
     }
     
 
     @IBAction func reviewClicked(_ sender: Any) {
-        let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/waze-navigation-live-traffic/id1511060662?action=write-review")!
+        let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/99-names-of-allah-memorize/id1511060662?action=write-review")!
         app.open(appStoreUrl)
     }
     
