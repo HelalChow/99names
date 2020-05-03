@@ -56,21 +56,14 @@ class ListVC: UIViewController {
         tableView.dataSource = self
 
     }
-    var begin: Date?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Analytics.logEvent("on_ListVC", parameters: nil)
-        begin = Date()
-        print("BEGIN>>> \(begin)")
         
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let end = Date()
-        let delta = begin! - end
-        print("DELTA>>> \(delta)")
-        
     }
    
     
@@ -141,11 +134,4 @@ extension ListVC: UITableViewDataSource{
     }
 }
 
-extension Date {
-
-    static func - (lhs: Date, rhs: Date) -> TimeInterval {
-        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
-    }
-
-}
 
