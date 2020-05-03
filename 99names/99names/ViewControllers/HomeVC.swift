@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController {
 
@@ -14,12 +15,14 @@ class HomeVC: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+//        AnalyticsConfiguration.shared().setAnalyticsCollectionEnabled(true)
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
         upSwipe.direction = .up
         view.addGestureRecognizer(upSwipe)
         setBackground()
     }
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        Analytics.logEvent("swiped_up_to_begin", parameters: nil)
        performSegue(withIdentifier: "swipe", sender: self)
     }
     

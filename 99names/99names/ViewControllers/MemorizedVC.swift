@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MemorizedVC: UIViewController {
     var memorizedArray = [second]()
@@ -31,6 +32,10 @@ class MemorizedVC: UIViewController {
         memTableView.delegate = self
         memTableView.dataSource = self
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.logEvent("on_MemorizedVC", parameters: nil)
+    }
     
     func checkError(){
         if memorizedArray.isEmpty == false{
@@ -46,6 +51,7 @@ class MemorizedVC: UIViewController {
 
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        Analytics.logEvent("removed_memCell", parameters: ["memorizedArrayCount": memorizedArray.count ])
         let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in
             self.memorizedArray.remove(at: indexPath.row)
             self.memTableView.deleteRows(at: [indexPath], with: .left)

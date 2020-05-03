@@ -9,6 +9,7 @@
 var array = [first]()
 
 import UIKit
+import Firebase
 
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +19,7 @@ class ListVC: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        Analytics.setScreenName("ListVC", screenClass: nil)
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
 //        tableView.estimatedRowHeight = 105.0
@@ -53,6 +55,22 @@ class ListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
+    }
+    var begin: Date?
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.logEvent("on_ListVC", parameters: nil)
+        begin = Date()
+        print("BEGIN>>> \(begin)")
+        
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let end = Date()
+        let delta = begin! - end
+        print("DELTA>>> \(delta)")
+        
     }
    
     
@@ -92,6 +110,7 @@ class ListVC: UIViewController {
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
         cell.changeCheck(num: cell.nameLabel.text!)
         
@@ -120,5 +139,13 @@ extension ListVC: UITableViewDataSource{
         
         return cell
     }
+}
+
+extension Date {
+
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+
 }
 

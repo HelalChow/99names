@@ -9,6 +9,7 @@ var count = 0
 
 import UIKit
 import Gemini
+import Firebase
 
 class quizCell: GeminiCell {
     
@@ -39,10 +40,11 @@ class quizCell: GeminiCell {
         if self.meaningLabel.isHidden == false{
             self.meaningLabel.isHidden = true
             self.originalLabel.isHidden = false
-        }
+            Analytics.logEvent("meaning_label_hide", parameters: nil)        }
         else{
             self.meaningLabel.isHidden = false
             self.originalLabel.isHidden = true
+            Analytics.logEvent("meaning_label_show", parameters: nil) 
         }
     }
     

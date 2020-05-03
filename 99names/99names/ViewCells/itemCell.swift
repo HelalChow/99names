@@ -8,6 +8,7 @@
 
 import UIKit
 import Gemini
+import Firebase
 
 class itemCell: GeminiCell {
 
@@ -33,9 +34,11 @@ class itemCell: GeminiCell {
     @IBAction func buttonTapped(_ sender: Any) {
         if self.meaningLabel.isHidden == false{
             self.meaningLabel.isHidden = true
+            Analytics.logEvent("meaning_label_hide", parameters: nil)
         }
         else{
             self.meaningLabel.isHidden = false
+            Analytics.logEvent("meaning_label_show", parameters: nil)
         }
         
     }

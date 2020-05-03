@@ -8,6 +8,7 @@
 var cellCount = 0
 
 import UIKit
+import Firebase
 
 class nameCell: UITableViewCell {
     
@@ -35,9 +36,11 @@ class nameCell: UITableViewCell {
     func changeCheck(num: String){
         if checkView.isHidden == true{
             checkView.isHidden = false
+            Analytics.logEvent("check_mark_set_true", parameters: nil)
             UserDefaults.standard.changeCheckMark(value: true, index: num)
         }else{
             checkView.isHidden = true
+            Analytics.logEvent("check_mark_set_false", parameters: nil)
             UserDefaults.standard.changeCheckMark(value: false, index: num)
         }
         

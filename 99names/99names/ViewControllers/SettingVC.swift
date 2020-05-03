@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Firebase
 
 class SettingVC: UIViewController {
 
@@ -16,8 +17,13 @@ class SettingVC: UIViewController {
         super.viewDidLoad()
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.logEvent("on_SettingVC", parameters: nil)
+    }
     
     @IBAction func shareClicked(_ sender: Any) {
+        Analytics.logEvent("share_btn_clicked", parameters: nil)
         let shareVC = UIActivityViewController(activityItems: ["Join me in memorizing the 99 names of Allah names with: https://itunes.apple.com/us/app/99-names-of-allah-memorize/id1511060662"], applicationActivities: nil)
         shareVC.popoverPresentationController?.sourceView = self.view
         self.present(shareVC, animated: true, completion: nil)
@@ -25,11 +31,13 @@ class SettingVC: UIViewController {
     
 
     @IBAction func reviewClicked(_ sender: Any) {
+        Analytics.logEvent("review_btn_clicked", parameters: nil)
         let appStoreUrl = URL(string: "https://itunes.apple.com/us/app/99-names-of-allah-memorize/id1511060662?action=write-review")!
         app.open(appStoreUrl)
     }
     
     @IBAction func contactClicked(_ sender: Any) {
+        Analytics.logEvent("contact_btn_clicked", parameters: nil)
         showMailComposer()
     }
     

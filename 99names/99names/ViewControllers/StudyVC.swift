@@ -10,6 +10,7 @@
 
 import UIKit
 import Gemini
+import Firebase
 
 class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -45,6 +46,13 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
             .scale(0.7)
             .scaleEffect(.scaleUp) // or .scaleDown
         }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Analytics.logEvent("on_studyVC", parameters: nil)
+    }
+    
+    
     @IBOutlet weak var errorLabel2: UILabel!
     
 

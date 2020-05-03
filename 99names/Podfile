@@ -7,6 +7,7 @@ target '99names' do
 
   # Pods for 99names
 	pod 'Gemini'
+	pod 'Firebase/Analytics'
 
   target '99namesTests' do
     inherit! :search_paths

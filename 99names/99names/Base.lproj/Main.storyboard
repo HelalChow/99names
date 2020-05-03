@@ -872,10 +872,10 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qya-M9-aVG"/>
-        <segue reference="oIW-jG-uZr"/>
+        <segue reference="b0s-F4-oJK"/>
+        <segue reference="2S4-wi-d1U"/>
         <segue reference="B9T-bm-31U"/>
-        <segue reference="7tO-hH-pen"/>
-        <segue reference="bqe-se-evo"/>
+        <segue reference="qpq-q5-pUv"/>
+        <segue reference="zrs-QO-xE3"/>
     </inferredMetricsTieBreakers>
 </document>
