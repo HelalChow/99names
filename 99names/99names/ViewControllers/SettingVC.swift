@@ -45,7 +45,6 @@ class SettingVC: UIViewController {
         guard MFMailComposeViewController.canSendMail() else{
             return
         }
-        
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
         composer.setToRecipients(["hchowdhury3273@hotmail.com"])
@@ -69,6 +68,8 @@ extension SettingVC: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error {
             controller.dismiss(animated: true)
+            return
         }
+        controller.dismiss(animated: true)
     }
 }
