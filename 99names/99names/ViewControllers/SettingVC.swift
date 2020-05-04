@@ -12,9 +12,18 @@ import Firebase
 
 class SettingVC: UIViewController {
 
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var shareView: UIImageView!
+    
     let app = UIApplication.shared
     override func viewDidLoad() {
         super.viewDidLoad()
+        if view.frame.width > 500{
+            shareButton.isHidden = true
+            shareLabel.isHidden = true
+            shareView.isHidden = true
+        }
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -60,6 +69,7 @@ class SettingVC: UIViewController {
         super.viewWillDisappear(animated)
         appUtility.lockOrientation(.all)
     }
+
     
     
 }

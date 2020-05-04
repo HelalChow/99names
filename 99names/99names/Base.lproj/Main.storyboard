@@ -380,9 +380,6 @@
                                     <constraint firstAttribute="height" constant="105" id="QtH-rW-Wb2"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="greenCell2"/>
-                                <connections>
-                                    <action selector="shareClicked:" destination="dlW-ru-b40" eventType="touchUpInside" id="Dwg-IY-Pl6"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9z-yw-Yh0">
                                 <rect key="frame" x="0.0" y="246" width="375" height="105"/>
@@ -578,6 +575,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EYg-cf-dV6"/>
                     </view>
+                    <connections>
+                        <outlet property="shareButton" destination="2jb-gb-jcg" id="YUM-DN-vUy"/>
+                        <outlet property="shareLabel" destination="ufI-uP-UaT" id="ggQ-6y-M5U"/>
+                        <outlet property="shareView" destination="0i5-Or-uru" id="RhV-41-eLE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbi-EA-SDq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
