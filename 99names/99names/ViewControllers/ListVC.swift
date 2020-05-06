@@ -17,6 +17,7 @@ class ListVC: UIViewController {
     @IBOutlet weak var memVCButton: UIButton!
     
     var strNum = "1"
+    var newAdded = 0
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,13 +107,13 @@ class ListVC: UIViewController {
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
         let isChecked = cell.changeCheck(num: cell.nameLabel.text!)
         
         if isChecked {
             memVCButton.pulsate()
         }
+        
         
     }
 }
