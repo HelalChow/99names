@@ -189,6 +189,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Full List" image="list.dash" catalog="system" id="dbL-HX-lIn"/>
                     <connections>
+                        <outlet property="memVCButton" destination="jma-lY-iDM" id="aso-BE-9xu"/>
                         <outlet property="tableView" destination="G23-EZ-bXX" id="v3x-pS-fmh"/>
                     </connections>
                 </viewController>
@@ -874,10 +875,10 @@
         <image name="studyScreen" width="1125" height="2436"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0s-F4-oJK"/>
-        <segue reference="2S4-wi-d1U"/>
-        <segue reference="B9T-bm-31U"/>
-        <segue reference="qpq-q5-pUv"/>
-        <segue reference="zrs-QO-xE3"/>
+        <segue reference="ytN-LY-AgX"/>
+        <segue reference="lsd-DI-HEg"/>
+        <segue reference="MDE-MZ-RUS"/>
+        <segue reference="efx-ht-hqA"/>
+        <segue reference="uGG-RX-3b4"/>
     </inferredMetricsTieBreakers>
 </document>

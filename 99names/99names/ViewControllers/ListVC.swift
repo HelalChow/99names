@@ -14,6 +14,7 @@ import Firebase
 class ListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var memVCButton: UIButton!
     
     var strNum = "1"
   
@@ -99,13 +100,19 @@ class ListVC: UIViewController {
         super.viewWillDisappear(animated)
         appUtility.lockOrientation(.all)
     }
+    
+    
  
 }
 extension ListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! nameCell
-        cell.changeCheck(num: cell.nameLabel.text!)
+        let isChecked = cell.changeCheck(num: cell.nameLabel.text!)
+        
+        if isChecked {
+            memVCButton.pulsate()
+        }
         
     }
 }
