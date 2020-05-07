@@ -48,7 +48,7 @@ class MemorizedVC: UIViewController {
     }
     
     func updateCountLabel(){
-        totalLabel.text =  "(" + String(memorizedArray.count) + " Selected)"
+        totalLabel.text =  "(" + String(memorizedArray.count) + " Total)"
     }
     
 
