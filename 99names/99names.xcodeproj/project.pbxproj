@@ -61,7 +61,7 @@
 		1B6A07F8245A3993007C93DA /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		1B6A07FB245A3D7C007C93DA /* reviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewService.swift; sourceTree = "<group>"; };
 		1B6A07FD245A8651007C93DA /* appUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUtility.swift; sourceTree = "<group>"; };
-		1BCD18972448F47D0047F83F /* 99names.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 99names.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BCD18972448F47D0047F83F /* 99 Names of Allah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "99 Names of Allah.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCD189A2448F47D0047F83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCD189C2448F47D0047F83F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1BCD18A12448F47D0047F83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		1BCD18982448F47D0047F83F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BCD18972448F47D0047F83F /* 99names.app */,
+				1BCD18972448F47D0047F83F /* 99 Names of Allah.app */,
 				1BCD18AD2448F47F0047F83F /* 99namesTests.xctest */,
 				1BCD18B82448F47F0047F83F /* 99namesUITests.xctest */,
 			);
@@ -259,7 +259,7 @@
 			);
 			name = 99names;
 			productName = 99names;
-			productReference = 1BCD18972448F47D0047F83F /* 99names.app */;
+			productReference = 1BCD18972448F47D0047F83F /* 99 Names of Allah.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1BCD18AC2448F47F0047F83F /* 99namesTests */ = {
@@ -674,16 +674,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4L2JW8YQE4;
 				INFOPLIST_FILE = 99names/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hchowdhury.99names;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "99 Names of Allah";
 				SWIFT_OBJC_BRIDGING_HEADER = "99names/Carousel/99names-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -698,16 +698,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4L2JW8YQE4;
 				INFOPLIST_FILE = 99names/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hchowdhury.99names;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "99 Names of Allah";
 				SWIFT_OBJC_BRIDGING_HEADER = "99names/Carousel/99names-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
