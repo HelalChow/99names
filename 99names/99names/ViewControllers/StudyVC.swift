@@ -16,6 +16,8 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     
     var newArr = [second]()
     @IBOutlet weak var collectionView: GeminiCollectionView!
+    
+    @IBOutlet weak var totalAddedLabel: UILabel!
     let review = reviewService.shared
     
     override func viewDidLoad() {
@@ -28,6 +30,7 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
                 }
                 counter = counter + 1
             }
+            updateCountLabel()
             
             if newArr.isEmpty == false{
                 errorLabel2.isHidden = true
@@ -50,6 +53,9 @@ class StudyVC: UIViewController, UICollectionViewDataSource, UICollectionViewDel
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         Analytics.logEvent("on_studyVC", parameters: nil)
+    }
+    func updateCountLabel(){
+        totalAddedLabel.text = "(" + String(newArr.count) + " Total)"
     }
     
     

@@ -12,9 +12,11 @@ import Firebase
 class MemorizedVC: UIViewController {
     var memorizedArray = [second]()
     @IBOutlet weak var memTableView: UITableView!
+    @IBOutlet weak var newTotalLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.memTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -25,8 +27,7 @@ class MemorizedVC: UIViewController {
             }
             counter = counter + 1
         }
-        
-        
+        updateCountLabel()
         checkError()
 
         memTableView.delegate = self
@@ -46,7 +47,9 @@ class MemorizedVC: UIViewController {
         }
     }
     
-    @IBOutlet weak var errorLabel: UILabel!
+    func updateCountLabel(){
+        totalLabel.text =  "(" + String(memorizedArray.count) + " Total)"
+    }
     
 
     
@@ -54,6 +57,7 @@ class MemorizedVC: UIViewController {
         Analytics.logEvent("removed_memCell", parameters: ["memorizedArrayCount": memorizedArray.count ])
         let remove = UIContextualAction(style: .normal, title: "Remove") { (action, view, nil) in
             self.memorizedArray.remove(at: indexPath.row)
+            self.updateCountLabel()
             self.memTableView.deleteRows(at: [indexPath], with: .left)
             self.checkError()
            }
