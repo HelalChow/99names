@@ -30,6 +30,7 @@ class ListVC: UIViewController {
             array = fetchedName
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                print(array)
             }
 //            UserDefaults.standard.storeList(array: array)
 //            UserDefaults.standard.changeOnce(value: false)
@@ -72,13 +73,14 @@ class ListVC: UIViewController {
         let url = basePath + num
         let request = URLRequest(url: URL(string: url)!)
         var total = [first]()
-
+        
         URLSession.shared.dataTask(with: request) { (data, response, err) in
             guard let data = data else {return}
             do {
                 for i in 1...99{
                     let initial = try JSONDecoder().decode(first.self, from: data)
                     total.append(initial)
+                    
                 }
                 
                 DispatchQueue.main.async {
